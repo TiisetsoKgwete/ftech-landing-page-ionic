@@ -1,5 +1,5 @@
 .about-shell {
-  padding: 22px;
+  padding: 0;
   display: grid;
   gap: 18px;
 }
@@ -89,7 +89,7 @@
 
 @media (max-width: 780px) {
   .about-shell {
-    padding: 16px;
+    padding: 0;
   }
 }
 

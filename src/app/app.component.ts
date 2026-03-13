@@ -1,6 +1,6 @@
 
 import { Component } from '@angular/core';
-import { RouterLink, RouterLinkActive } from '@angular/router';
+import { NavigationCancel, NavigationEnd, NavigationError, NavigationStart, Router, RouterLink, RouterLinkActive } from '@angular/router';
 import { IonApp, IonSplitPane, IonMenu, IonContent, IonList, IonMenuToggle, IonItem, IonIcon, IonRouterOutlet, IonRouterLink } from '@ionic/angular/standalone';
 import { addIcons } from 'ionicons';
 import { homeOutline, homeSharp, informationCircleOutline, informationCircleSharp, briefcaseOutline, briefcaseSharp, mailOutline, mailSharp, starOutline, starSharp, helpCircleOutline, helpCircleSharp, moonOutline, sunnyOutline } from 'ionicons/icons';
@@ -22,12 +22,25 @@ export class AppComponent {
   ];
 
   isDark = true;
+  isRouteTransitioning = false;
 
-  constructor() {
+  constructor(private router: Router) {
     addIcons({ homeOutline, homeSharp, informationCircleOutline, informationCircleSharp, briefcaseOutline, briefcaseSharp, mailOutline, mailSharp, starOutline, starSharp, helpCircleOutline, helpCircleSharp, moonOutline, sunnyOutline });
     const saved = localStorage.getItem('ftech-theme');
     this.isDark = saved !== 'light';
     this.applyTheme();
+
+    this.router.events.subscribe((event) => {
+      if (event instanceof NavigationStart) {
+        this.isRouteTransitioning = true;
+      }
+
+      if (event instanceof NavigationEnd || event instanceof NavigationCancel || event instanceof NavigationError) {
+        window.setTimeout(() => {
+          this.isRouteTransitioning = false;
+        }, 420);
+      }
+    });
   }
 
   toggleTheme() {

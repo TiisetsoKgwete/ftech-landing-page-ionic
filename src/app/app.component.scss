@@ -1,12 +1,21 @@
 ion-split-pane {
+  --rail-width: 74px;
   --side-width: 74px;
   --side-max-width: 74px;
+  --side-min-width: 74px;
 }
 
 ion-menu {
   --background: transparent;
   --width: 74px;
   --max-width: 74px;
+  --min-width: 74px;
+}
+
+ion-split-pane.split-pane-visible > ion-menu {
+  min-width: var(--rail-width);
+  max-width: var(--rail-width);
+  width: var(--rail-width);
 }
 
 ion-menu ion-content {
@@ -222,13 +231,16 @@ ion-menu ion-item:active::after {
 
 @media (max-width: 767px) {
   ion-split-pane {
+    --rail-width: 68px;
     --side-width: 68px;
     --side-max-width: 68px;
+    --side-min-width: 68px;
   }
 
   ion-menu {
     --width: 68px;
     --max-width: 68px;
+    --min-width: 68px;
   }
 
   ion-menu ion-item::after {

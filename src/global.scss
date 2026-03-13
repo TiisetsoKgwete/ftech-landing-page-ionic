@@ -116,9 +116,9 @@ body {
 .services-shell,
 .faq-shell,
 .testimonials-shell {
-  max-width: 1180px;
-  margin: 0 auto;
   width: 100%;
+  max-width: none;
+  margin: 0;
 }
 
 .card-hover-lift {

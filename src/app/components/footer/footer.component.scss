@@ -1,0 +1,115 @@
+ion-footer {
+  margin-top: 36px;
+  background: transparent;
+  color: #e7f1ff;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  border: 1px solid rgba(200, 223, 255, 0.24);
+  border-radius: 26px 26px 0 0;
+  background: linear-gradient(160deg, rgba(12, 24, 49, 0.72) 0%, rgba(18, 34, 68, 0.62) 100%);
+  -webkit-backdrop-filter: blur(22px) saturate(126%);
+  backdrop-filter: blur(22px) saturate(126%);
+  box-shadow: 0 -14px 40px rgba(5, 11, 24, 0.5);
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 28px;
+  padding: 34px 24px;
+}
+
+.footer-section {
+  h4 {
+    font-size: 1.4rem;
+    margin-bottom: 12px;
+    color: #ffffff;
+    letter-spacing: 0.02em;
+  }
+
+  h5 {
+    font-size: 0.92rem;
+    margin-bottom: 14px;
+    color: #8fc4ff;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+  }
+
+  p {
+    line-height: 1.7;
+    color: #bdd3f2;
+    margin: 0 0 8px 0;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  li {
+    margin-bottom: 8px;
+  }
+
+  a {
+    color: #d3e6ff;
+    text-decoration: none;
+    transition: color 0.2s ease, text-shadow 0.2s ease;
+  }
+
+  a:hover {
+    color: #ffffff;
+    text-shadow: 0 0 14px rgba(109, 199, 255, 0.7);
+  }
+}
+
+.social-links {
+  display: flex;
+  gap: 12px;
+  margin-top: 18px;
+
+  a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background: rgba(96, 157, 255, 0.2);
+    border: 1px solid rgba(175, 214, 255, 0.4);
+    color: #d5ecff;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  a:hover {
+    transform: translateY(-4px) scale(1.03);
+    box-shadow: 0 8px 20px rgba(72, 157, 255, 0.38);
+  }
+
+  ion-icon {
+    font-size: 1.2rem;
+  }
+}
+
+.footer-bottom {
+  padding: 16px 24px 18px;
+  text-align: center;
+  border-top: 1px solid rgba(189, 220, 255, 0.2);
+  background: rgba(9, 18, 38, 0.5);
+
+  p {
+    margin: 0;
+    color: #9cb4d7;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .footer-content {
+    grid-template-columns: 1fr;
+    padding: 28px 18px;
+  }
+}

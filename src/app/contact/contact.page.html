@@ -1,0 +1,39 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Contact Us</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="page-shell">
+  <form class="contact-form glass" [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+    <ion-item>
+      <ion-label position="stacked">Name</ion-label>
+      <ion-input formControlName="name" placeholder="Enter your name"></ion-input>
+    </ion-item>
+    <ion-text color="danger" *ngIf="contactForm.get('name')?.invalid && contactForm.get('name')?.touched">
+      Name is required and must be at least 2 characters.
+    </ion-text>
+
+    <ion-item>
+      <ion-label position="stacked">Email</ion-label>
+      <ion-input formControlName="email" type="email" placeholder="Enter your email"></ion-input>
+    </ion-item>
+    <ion-text color="danger" *ngIf="contactForm.get('email')?.invalid && contactForm.get('email')?.touched">
+      Please enter a valid email.
+    </ion-text>
+
+    <ion-item>
+      <ion-label position="stacked">Message</ion-label>
+      <ion-textarea formControlName="message" placeholder="Enter your message" rows="6"></ion-textarea>
+    </ion-item>
+    <ion-text color="danger" *ngIf="contactForm.get('message')?.invalid && contactForm.get('message')?.touched">
+      Message is required and must be at least 10 characters.
+    </ion-text>
+
+    <ion-button expand="block" type="submit" [disabled]="contactForm.invalid">Send Message</ion-button>
+  </form>
+  <app-footer></app-footer>
+</ion-content>

@@ -1,0 +1,55 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>About</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="page-shell">
+  <div class="about-shell">
+    <section class="about-hero glass">
+      <div class="hero-tags">
+        <span class="chip active">About</span>
+        <span class="chip">Mission</span>
+        <span class="chip">Capabilities</span>
+      </div>
+      <h1 class="section-title">Your number one destination for all your business needs</h1>
+      <p class="section-subtitle">We combine product engineering, strategy, and support into one focused team.</p>
+    </section>
+
+    <section class="features-grid">
+      <ion-card class="glass feature-card">
+        <ion-card-header>
+          <ion-icon name="speedometer-outline" slot="start"></ion-icon>
+          <ion-card-title>Fast</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          We deliver quick and efficient solutions to keep your business ahead.
+        </ion-card-content>
+      </ion-card>
+
+      <ion-card class="glass feature-card">
+        <ion-card-header>
+          <ion-icon name="shield-checkmark-outline" slot="start"></ion-icon>
+          <ion-card-title>Secure</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          Your data and operations are protected with top-notch security measures.
+        </ion-card-content>
+      </ion-card>
+
+      <ion-card class="glass feature-card">
+        <ion-card-header>
+          <ion-icon name="phone-portrait-outline" slot="start"></ion-icon>
+          <ion-card-title>Responsive</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          Our services adapt seamlessly to all devices and screen sizes.
+        </ion-card-content>
+      </ion-card>
+    </section>
+  </div>
+  <app-footer></app-footer>
+</ion-content>

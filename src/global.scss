@@ -1,0 +1,188 @@
+/*
+ * App Global CSS
+ * ----------------------------------------------------------------------------
+ * Put style rules here that you want to apply globally. These styles are for
+ * the entire app and not just one component. Additionally, this file can be
+ * used as an entry point to import other CSS/Sass files to be included in the
+ * output CSS.
+ * For more information on global stylesheets, visit the documentation:
+ * https://ionicframework.com/docs/layout/global-stylesheets
+ */
+
+/* Core CSS required for Ionic components to work properly */
+@import "@ionic/angular/css/core.css";
+
+/* Basic CSS for apps built with Ionic */
+@import "@ionic/angular/css/normalize.css";
+@import "@ionic/angular/css/structure.css";
+@import "@ionic/angular/css/typography.css";
+@import "@ionic/angular/css/display.css";
+
+/* Optional CSS utils that can be commented out */
+@import "@ionic/angular/css/padding.css";
+@import "@ionic/angular/css/float-elements.css";
+@import "@ionic/angular/css/text-alignment.css";
+@import "@ionic/angular/css/text-transformation.css";
+@import "@ionic/angular/css/flex-utils.css";
+
+/**
+ * Ionic Dark Mode
+ * -----------------------------------------------------
+ * For more info, please see:
+ * https://ionicframework.com/docs/theming/dark-mode
+ */
+
+/* @import "@ionic/angular/css/palettes/dark.always.css"; */
+/* @import "@ionic/angular/css/palettes/dark.class.css"; */
+@import '@ionic/angular/css/palettes/dark.class.css';
+
+:root {
+  --ftech-bg-0: #060b1b;
+  --ftech-bg-1: #0b1630;
+  --ftech-bg-2: #122348;
+  --ftech-accent: #4fa3ff;
+  --ftech-accent-2: #6ee7ff;
+  --ftech-text: #edf3ff;
+  --ftech-muted: #adc1e3;
+  --ftech-glass-border: rgba(198, 223, 255, 0.34);
+  --ftech-glass-bg: rgba(14, 27, 54, 0.38);
+  --ftech-glass-shadow: 0 18px 45px rgba(6, 12, 28, 0.45);
+  --ftech-space-1: 8px;
+  --ftech-space-2: 12px;
+  --ftech-space-3: 16px;
+  --ftech-space-4: 24px;
+  --ftech-space-5: 32px;
+  --ftech-radius-card: 20px;
+  --ftech-radius-chip: 999px;
+  --ftech-transition-fast: 0.2s ease;
+  --ftech-transition-soft: 0.35s ease;
+}
+
+html,
+body,
+ion-app,
+ion-content {
+  font-family: 'Segoe UI', 'Avenir Next', 'Helvetica Neue', sans-serif;
+}
+
+body {
+  background:
+    radial-gradient(1200px 700px at 8% -5%, rgba(121, 180, 255, 0.27), transparent 58%),
+    radial-gradient(900px 620px at 92% 10%, rgba(113, 133, 255, 0.2), transparent 50%),
+    linear-gradient(160deg, var(--ftech-bg-0) 0%, var(--ftech-bg-1) 46%, var(--ftech-bg-2) 100%);
+  color: var(--ftech-text);
+}
+
+.glass {
+  background: var(--ftech-glass-bg);
+  -webkit-backdrop-filter: blur(22px) saturate(125%);
+  backdrop-filter: blur(22px) saturate(125%);
+  border: 1px solid var(--ftech-glass-border);
+  border-radius: var(--ftech-radius-card);
+  box-shadow: var(--ftech-glass-shadow);
+}
+
+.glass-hero {
+  background: rgba(16, 33, 66, 0.34);
+  -webkit-backdrop-filter: blur(28px) saturate(132%);
+  backdrop-filter: blur(28px) saturate(132%);
+  border: 1px solid rgba(218, 235, 255, 0.38);
+  border-radius: 28px;
+  box-shadow: 0 25px 65px rgba(5, 10, 24, 0.55), inset 0 1px 0 rgba(255, 255, 255, 0.18);
+}
+
+.page-shell {
+  min-height: 100%;
+  background:
+    radial-gradient(1000px 600px at 100% -10%, rgba(96, 165, 250, 0.22), transparent 58%),
+    radial-gradient(900px 700px at -10% 10%, rgba(45, 212, 191, 0.12), transparent 54%),
+    linear-gradient(155deg, rgba(10, 21, 45, 0.96) 0%, rgba(16, 32, 64, 0.92) 100%);
+}
+
+.section-title {
+  color: var(--ftech-text);
+  text-shadow: 0 8px 26px rgba(0, 0, 0, 0.35);
+  line-height: 1.12;
+  letter-spacing: 0.01em;
+}
+
+.section-subtitle {
+  color: var(--ftech-muted);
+  line-height: 1.65;
+}
+
+.home-shell,
+.about-shell,
+.services-shell,
+.faq-shell,
+.testimonials-shell {
+  max-width: 1180px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.card-hover-lift {
+  transition: transform var(--ftech-transition-soft), box-shadow var(--ftech-transition-soft);
+}
+
+.card-hover-lift:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 14px 30px rgba(40, 110, 210, 0.24);
+}
+
+/* ── Light mode overrides────────────────────────────── */
+body.light-mode {
+  --ftech-bg-0: #e8f0ff;
+  --ftech-bg-1: #f0f5ff;
+  --ftech-bg-2: #dce8ff;
+  --ftech-text: #0c1a38;
+  --ftech-muted: #3a4f77;
+  --ftech-glass-border: rgba(80, 120, 200, 0.28);
+  --ftech-glass-bg: rgba(255, 255, 255, 0.42);
+  --ftech-glass-shadow: 0 18px 45px rgba(80, 120, 200, 0.18);
+
+  background:
+    radial-gradient(1200px 700px at 8% -5%, rgba(160, 200, 255, 0.35), transparent 58%),
+    radial-gradient(900px 620px at 92% 10%, rgba(140, 170, 255, 0.25), transparent 50%),
+    linear-gradient(160deg, #e8f0ff 0%, #f0f5ff 46%, #dce8ff 100%);
+  color: var(--ftech-text);
+}
+
+body.light-mode .page-shell {
+  background:
+    radial-gradient(1000px 600px at 100% -10%, rgba(130, 180, 255, 0.2), transparent 58%),
+    radial-gradient(900px 700px at -10% 10%, rgba(100, 200, 190, 0.1), transparent 54%),
+    linear-gradient(155deg, rgba(222, 237, 255, 0.97) 0%, rgba(238, 247, 255, 0.93) 100%);
+}
+
+body.light-mode .glass {
+  background: rgba(255, 255, 255, 0.42);
+  border-color: rgba(80, 130, 220, 0.28);
+  box-shadow: 0 18px 45px rgba(80, 120, 200, 0.18);
+}
+
+body.light-mode .glass-hero {
+  background: rgba(240, 248, 255, 0.52);
+  border-color: rgba(100, 160, 230, 0.38);
+  box-shadow: 0 25px 65px rgba(60, 100, 200, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.65);
+}
+
+body.light-mode .section-title {
+  color: #0c1a38;
+  text-shadow: 0 4px 16px rgba(60, 100, 200, 0.15);
+}
+
+body.light-mode .section-subtitle {
+  color: #3a4f77;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

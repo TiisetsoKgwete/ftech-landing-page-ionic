@@ -1,0 +1,51 @@
+<ion-header [translucent]="true" class="header-shadow">
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Testimonials</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="false" class="page-shell">
+  <div class="testimonials-shell">
+    <section class="testimonials-hero glass">
+      <div class="hero-tags">
+        <span class="chip active">Testimonials</span>
+        <span class="chip">Reviews</span>
+        <span class="chip">Results</span>
+      </div>
+      <h1 class="section-title">What Our Clients Say</h1>
+      <p class="section-subtitle">Don’t just take our word for it — hear from our satisfied customers.</p>
+    </section>
+
+    <section>
+      <ion-card class="testimonial-card glass" *ngFor="let testimonial of testimonials">
+      <div class="stars">
+        <ion-icon name="star-outline" *ngFor="let star of getStars(testimonial.rating)" color="warning"></ion-icon>
+      </div>
+      
+      <ion-card-content>
+        <p class="testimonial-text">"{{ testimonial.text }}"</p>
+      </ion-card-content>
+
+      <div class="client-info">
+        <img [src]="testimonial.image" [alt]="testimonial.name" title="{{ testimonial.name }}" class="client-avatar" />
+        <div class="client-details">
+          <h4>{{ testimonial.name }}</h4>
+          <p class="role">{{ testimonial.role }}</p>
+          <p class="company">{{ testimonial.company }}</p>
+        </div>
+      </div>
+      </ion-card>
+    </section>
+
+    <section class="cta-section glass">
+      <h2>Join Our Growing Community</h2>
+      <p>Become part of 500+ successful businesses.</p>
+      <ion-button color="primary" size="large" routerLink="/contact">Get Started Today</ion-button>
+    </section>
+  </div>
+
+  <app-footer></app-footer>
+</ion-content>

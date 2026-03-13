@@ -1,0 +1,105 @@
+.services-shell {
+  padding: 22px;
+  display: grid;
+  gap: 18px;
+}
+
+.services-hero {
+  padding: 20px;
+  border-radius: 24px;
+}
+
+.hero-tags {
+  display: inline-flex;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.chip {
+  padding: 7px 11px;
+  border-radius: 999px;
+  border: 1px solid rgba(160, 208, 255, 0.22);
+  color: #c9def8;
+  font-size: 0.78rem;
+}
+
+.chip.active {
+  background: rgba(82, 140, 255, 0.28);
+  color: #fff;
+}
+
+.services-hero .section-title {
+  margin: 0 0 8px;
+  font-size: clamp(1.55rem, 3.2vw, 2.1rem);
+}
+
+.services-hero .section-subtitle {
+  margin: 0;
+  max-width: 680px;
+  line-height: 1.65;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.service-card {
+  margin: 0;
+  border: 1px solid rgba(191, 218, 255, 0.25);
+  transition: transform 0.22s ease, box-shadow 0.22s ease;
+  animation: revealSoft 0.55s ease both;
+
+  &:nth-child(2) {
+    animation-delay: 0.06s;
+  }
+
+  &:nth-child(3) {
+    animation-delay: 0.12s;
+  }
+
+  &:nth-child(4) {
+    animation-delay: 0.18s;
+  }
+
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 26px rgba(70, 153, 255, 0.2);
+  }
+
+  ion-card-title {
+    color: #ffffff;
+    font-size: 1.08rem;
+  }
+
+  ion-card-content {
+    color: #c1d5f5;
+    line-height: 1.65;
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 960px) {
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 780px) {
+  .services-shell {
+    padding: 16px;
+  }
+}
+
+@keyframes revealSoft {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

@@ -1,0 +1,29 @@
+<ion-app>
+  <ion-split-pane contentId="main-content">
+    <ion-menu contentId="main-content" type="overlay">
+      <ion-content>
+        <ion-list id="inbox-list">
+          @for (p of appPages; track p; let i = $index) {
+            <ion-menu-toggle auto-hide="false">
+              <ion-item routerDirection="root" [routerLink]="[p.url]" lines="none" detail="false" routerLinkActive="selected" [attr.data-title]="p.title" [attr.aria-label]="p.title" [attr.title]="p.title" tabindex="0">
+                <div class="nav-icon-bubble">
+                  <ion-icon aria-hidden="true" [ios]="p.icon + '-outline'" [md]="p.icon + '-sharp'"></ion-icon>
+                </div>
+              </ion-item>
+            </ion-menu-toggle>
+          }
+        </ion-list>
+
+        <div class="theme-toggle-wrap">
+          <button class="theme-toggle-btn" type="button" (click)="toggleTheme()" [title]="isDark ? 'Switch to light mode' : 'Switch to dark mode'" aria-label="Toggle theme">
+            <div class="nav-icon-bubble theme-bubble">
+              <ion-icon [name]="isDark ? 'sunny-outline' : 'moon-outline'" aria-hidden="true"></ion-icon>
+            </div>
+            <span class="sr-only">Toggle theme</span>
+          </button>
+        </div>
+      </ion-content>
+    </ion-menu>
+    <ion-router-outlet id="main-content"></ion-router-outlet>
+  </ion-split-pane>
+</ion-app>

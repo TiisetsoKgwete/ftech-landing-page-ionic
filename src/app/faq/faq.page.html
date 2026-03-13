@@ -1,0 +1,46 @@
+<ion-header [translucent]="true" class="header-shadow">
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>FAQ</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="false" class="page-shell">
+  <div class="faq-shell">
+    <section class="faq-hero glass">
+      <div class="hero-tags">
+        <span class="chip active">FAQ</span>
+        <span class="chip">Answers</span>
+        <span class="chip">Support</span>
+      </div>
+      <h1 class="section-title">Frequently Asked Questions</h1>
+      <p class="section-subtitle">Find quick answers to common questions about our services.</p>
+    </section>
+
+    <section class="faq-list">
+      <ion-card class="faq-item glass" *ngFor="let faq of faqs">
+        <ion-card-content class="faq-header" (click)="toggleFAQ(faq)">
+          <div class="question">
+            <h3>{{ faq.question }}</h3>
+            <ion-icon [name]="faq.open ? 'chevron-up-outline' : 'chevron-down-outline'"></ion-icon>
+          </div>
+        </ion-card-content>
+
+        <div class="faq-answer" *ngIf="faq.open">
+          <p>{{ faq.answer }}</p>
+        </div>
+      </ion-card>
+    </section>
+
+    <section class="cta-section glass">
+      <h2>Still Have Questions?</h2>
+      <p>Our expert team is ready to help.</p>
+      <ion-button color="primary" size="large" routerLink="/contact">Contact Us</ion-button>
+    </section>
+  </div>
+
+  <app-footer></app-footer>
+        
+</ion-content>

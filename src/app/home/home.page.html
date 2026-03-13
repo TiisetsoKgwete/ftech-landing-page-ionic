@@ -1,0 +1,135 @@
+<ion-header [translucent]="true" class="header-shadow">
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Home</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div class="home-shell page-shell">
+    <section class="hero-section glass">
+      <div class="hero-utility glass">
+        <span class="utility-chip active">Overview</span>
+        <span class="utility-chip">Innovation</span>
+        <span class="utility-chip">Growth</span>
+        <span class="utility-chip">Support</span>
+      </div>
+
+      <div class="hero-layout fade-in">
+        <div class="hero-copy">
+          <h1 class="hero-title">FTECH Solutions</h1>
+          <p class="tagline">Finding solutions for the future of your business</p>
+          <p class="welcome">Build, scale, and secure your digital business with one trusted partner.</p>
+
+          <div class="button-group">
+            <ion-button color="light" class="cta-button" (click)="toggleStats()">{{ showStats ? 'Hide Stats' : 'Show Stats' }}</ion-button>
+            <ion-button fill="outline" color="light" (click)="toggleFeatures()">{{ showFeatures ? 'Hide Features' : 'Show Features' }}</ion-button>
+          </div>
+        </div>
+
+        <article class="spotlight-card glass">
+          <p class="spotlight-kicker">Product Spotlight</p>
+          <h3>FTECH Command Center</h3>
+          <p>One dashboard for web systems, analytics, consulting milestones, and support health.</p>
+          <ion-button size="small" color="primary" routerLink="/services">Explore Platform</ion-button>
+        </article>
+      </div>
+    </section>
+
+    <section class="stats-section" *ngIf="showStats">
+      <div class="stat-card glass">
+        <h3>500+</h3>
+        <p>Happy Clients</p>
+      </div>
+      <div class="stat-card glass">
+        <h3>10+</h3>
+        <p>Years Experience</p>
+      </div>
+      <div class="stat-card glass">
+        <h3>99%</h3>
+        <p>Success Rate</p>
+      </div>
+    </section>
+
+    <section class="trust-row glass">
+      <div class="trust-item">
+        <span class="trust-value">24/7</span>
+        <span class="trust-label">Support Coverage</span>
+      </div>
+      <div class="trust-item">
+        <span class="trust-value">2.3x</span>
+        <span class="trust-label">Average Growth Lift</span>
+      </div>
+      <div class="trust-item">
+        <span class="trust-value">ISO</span>
+        <span class="trust-label">Security-First Standards</span>
+      </div>
+      <div class="trust-item">
+        <span class="trust-value">95%</span>
+        <span class="trust-label">Long-Term Retention</span>
+      </div>
+    </section>
+
+    <section class="features-highlight" *ngIf="showFeatures">
+      <h2 class="section-title">Why Choose FTECH?</h2>
+      <ion-row>
+        <ion-col sizeMd="6" sizeLg="3">
+          <div class="feature-box glass">
+            <ion-icon name="flash"></ion-icon>
+            <h4>Lightning Fast</h4>
+            <p>Performance optimized for speed</p>
+          </div>
+        </ion-col>
+        <ion-col sizeMd="6" sizeLg="3">
+          <div class="feature-box glass">
+            <ion-icon name="shield-checkmark"></ion-icon>
+            <h4>Highly Secure</h4>
+            <p>Enterprise-grade security</p>
+          </div>
+        </ion-col>
+        <ion-col sizeMd="6" sizeLg="3">
+          <div class="feature-box glass">
+            <ion-icon name="people"></ion-icon>
+            <h4>Expert Team</h4>
+            <p>Certified professionals</p>
+          </div>
+        </ion-col>
+        <ion-col sizeMd="6" sizeLg="3">
+          <div class="feature-box glass">
+            <ion-icon name="checkmark-done-circle"></ion-icon>
+            <h4>24/7 Support</h4>
+            <p>Always here for you</p>
+          </div>
+        </ion-col>
+      </ion-row>
+    </section>
+
+    <section class="offers-strip">
+      <h3 class="section-title">Special Offers</h3>
+      <div class="offer-scroll">
+        <article class="offer-card glass">
+          <p>Web Suite Launch</p>
+          <strong>20% Off</strong>
+        </article>
+        <article class="offer-card glass">
+          <p>Business Automation</p>
+          <strong>Starter Pack</strong>
+        </article>
+        <article class="offer-card glass">
+          <p>Security Review</p>
+          <strong>Free Consultation</strong>
+        </article>
+      </div>
+    </section>
+
+    <section class="cta-section glass" *ngIf="showStats || showFeatures">
+      <h2>Ready to Transform Your Business?</h2>
+      <p>Join hundreds of companies already using FTECH.</p>
+      <ion-button color="primary" size="large" class="primary-cta" routerLink="/contact">Contact Us Today</ion-button>
+    </section>
+  </div>
+
+  <app-footer></app-footer>
+</ion-content>

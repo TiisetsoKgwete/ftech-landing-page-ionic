@@ -3,6 +3,9 @@ ion-split-pane {
   --side-width: 74px;
   --side-max-width: 74px;
   --side-min-width: 74px;
+  width: 100%;
+  max-width: 100vw;
+  overflow-x: hidden;
 }
 
 ion-menu {
@@ -16,6 +19,13 @@ ion-split-pane.split-pane-visible > ion-menu {
   min-width: var(--rail-width);
   max-width: var(--rail-width);
   width: var(--rail-width);
+}
+
+ion-split-pane.split-pane-visible > #main-content {
+  flex: 1 1 auto;
+  min-width: 0;
+  width: calc(100vw - var(--rail-width));
+  max-width: calc(100vw - var(--rail-width));
 }
 
 ion-menu ion-content {
@@ -35,6 +45,8 @@ ion-list#inbox-list {
   -webkit-backdrop-filter: blur(22px) saturate(120%);
   backdrop-filter: blur(22px) saturate(120%);
   box-shadow: 0 18px 40px rgba(4, 9, 22, 0.55);
+  position: relative;
+  z-index: 1;
 }
 
 ion-menu ion-item {
@@ -129,6 +141,7 @@ ion-list#inbox-list > ion-menu-toggle:nth-child(6) .nav-icon-bubble { animation-
   right: 0;
   display: flex;
   justify-content: center;
+  z-index: 1;
 }
 
 .theme-toggle-btn {
@@ -192,58 +205,28 @@ body.light-mode ion-menu ion-item:hover .nav-icon-bubble {
   box-shadow: 0 10px 24px rgba(60, 120, 255, 0.28), inset 0 1px 0 rgba(255, 255, 255, 0.5);
 }
 
-body.light-mode ion-menu ion-item::after {
-  background: rgba(240, 248, 255, 0.96);
-  color: #0c1a38;
-  border-color: rgba(100, 150, 230, 0.35);
-  box-shadow: 0 8px 20px rgba(60, 100, 200, 0.18);
-}
-
-ion-menu ion-item::after {
-  content: attr(data-title);
-  position: absolute;
-  left: calc(100% + 12px);
-  top: 50%;
-  transform: translateY(-50%) translateX(-6px);
-  opacity: 0;
-  pointer-events: none;
-  white-space: nowrap;
-  background: rgba(10, 23, 46, 0.92);
-  color: #e5f1ff;
-  font-size: 0.82rem;
-  font-weight: 600;
-  letter-spacing: 0.04em;
-  padding: 8px 12px;
-  border: 1px solid rgba(180, 214, 255, 0.34);
-  border-radius: 10px;
-  box-shadow: 0 12px 28px rgba(5, 10, 24, 0.5);
-  transition: opacity 0.18s ease, transform 0.18s ease;
-  z-index: 6;
-}
-
-ion-menu ion-item:hover::after,
-ion-menu ion-item:focus::after,
-ion-menu ion-item:focus-visible::after,
-ion-menu ion-item:active::after {
-  opacity: 1;
-  transform: translateY(-50%) translateX(0);
-}
 
 @media (max-width: 767px) {
   ion-split-pane {
-    --rail-width: 68px;
-    --side-width: 68px;
-    --side-max-width: 68px;
-    --side-min-width: 68px;
+    --rail-width: 62px;
+    --side-width: 62px;
+    --side-max-width: 62px;
+    --side-min-width: 62px;
   }
 
   ion-menu {
-    --width: 68px;
-    --max-width: 68px;
-    --min-width: 68px;
+    --width: 62px;
+    --max-width: 62px;
+    --min-width: 62px;
   }
 
-  ion-menu ion-item::after {
-    left: calc(100% + 10px);
+  ion-menu ion-item {
+    width: 44px;
+    min-width: 44px;
+  }
+
+  .nav-icon-bubble {
+    width: 36px;
+    height: 36px;
   }
 }

@@ -65,6 +65,16 @@ ion-content {
   font-family: 'Segoe UI', 'Avenir Next', 'Helvetica Neue', sans-serif;
 }
 
+html,
+body,
+ion-app {
+  overflow-x: hidden;
+}
+
+ion-menu-button {
+  display: none !important;
+}
+
 body {
   background:
     radial-gradient(1200px 700px at 8% -5%, rgba(121, 180, 255, 0.27), transparent 58%),
@@ -119,6 +129,7 @@ body {
   width: 100%;
   max-width: none;
   margin: 0;
+  overflow-x: hidden;
 }
 
 .card-hover-lift {
@@ -128,6 +139,245 @@ body {
 .card-hover-lift:hover {
   transform: translateY(-3px);
   box-shadow: 0 14px 30px rgba(40, 110, 210, 0.24);
+}
+
+.platform-bar {
+  margin-top: 14px;
+  padding: 12px 18px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  border-radius: 24px 24px 0 0;
+  background: linear-gradient(180deg, rgba(34, 52, 49, 0.82) 0%, rgba(28, 40, 41, 0.88) 100%);
+}
+
+.platform-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.platform-link {
+  padding: 10px 14px;
+  border-radius: 999px;
+  color: #d7e4de;
+  font-size: 0.92rem;
+}
+
+.platform-link.active {
+  background: rgba(67, 86, 81, 0.9);
+  color: #ffffff;
+}
+
+.platform-brand {
+  font-size: 1.7rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  color: #eef8f2;
+}
+
+.hero-frame {
+  padding: 8px;
+  border-radius: 28px;
+  background: linear-gradient(180deg, rgba(17, 28, 37, 0.4), rgba(16, 31, 55, 0.18));
+  border: 1px solid rgba(176, 214, 255, 0.16);
+}
+
+.hero-utility {
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  padding: 8px;
+  border-radius: 16px;
+  margin-bottom: 18px;
+  max-width: 100%;
+}
+
+.utility-chip {
+  font-size: 0.8rem;
+  color: #cae0ff;
+  padding: 8px 12px;
+  border-radius: 999px;
+  border: 1px solid rgba(160, 210, 255, 0.18);
+  max-width: 100%;
+}
+
+.utility-chip.active {
+  color: #ffffff;
+  background: rgba(82, 140, 255, 0.28);
+  border-color: rgba(170, 216, 255, 0.38);
+}
+
+.hero-mini-controls {
+  display: inline-flex;
+  gap: 8px;
+  margin-left: auto;
+}
+
+.mini-control {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.14);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+}
+
+.spotlight-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(10, 18, 32, 0.1), rgba(10, 18, 32, 0.72));
+}
+
+.spotlight-content {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  align-content: end;
+  gap: 10px;
+}
+
+.hero-pager {
+  position: absolute;
+  right: 20px;
+  bottom: 18px;
+  z-index: 1;
+  display: inline-flex;
+  gap: 8px;
+}
+
+.pager-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.4);
+}
+
+.pager-dot.active {
+  background: #ffffff;
+  box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.12);
+}
+
+.spotlight-kicker {
+  margin: 0;
+  color: #9bc8ff;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.75rem;
+}
+
+.offer-art {
+  min-height: 88px;
+  border-radius: 14px;
+  border: 1px solid rgba(198, 223, 255, 0.18);
+  background-size: cover;
+  background-position: center;
+}
+
+.offer-art-one {
+  background-image: linear-gradient(180deg, rgba(12, 18, 34, 0.1), rgba(12, 18, 34, 0.45)), url('https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=900&q=80');
+}
+
+.offer-art-two {
+  background-image: linear-gradient(180deg, rgba(12, 18, 34, 0.1), rgba(12, 18, 34, 0.45)), url('https://images.unsplash.com/photo-1493711662062-fa541adb3fc8?auto=format&fit=crop&w=900&q=80');
+}
+
+.offer-art-three {
+  background-image: linear-gradient(180deg, rgba(12, 18, 34, 0.1), rgba(12, 18, 34, 0.45)), url('https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=900&q=80');
+}
+
+.offer-badge {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  z-index: 1;
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.92);
+  color: #18263c;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.primary-cta {
+  --border-radius: 14px;
+  --box-shadow: 0 10px 24px rgba(57, 127, 231, 0.35);
+  font-weight: 700;
+}
+
+.route-glow {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0;
+  background:
+    radial-gradient(360px 220px at 18% 18%, rgba(98, 188, 255, 0.12), transparent 70%),
+    linear-gradient(90deg, rgba(100, 174, 255, 0), rgba(100, 174, 255, 0.12), rgba(100, 174, 255, 0));
+  mix-blend-mode: screen;
+  transition: opacity 0.28s ease;
+  z-index: 3;
+}
+
+.route-glow.active {
+  opacity: 1;
+}
+
+.route-transitioning ion-router-outlet .ion-page {
+  animation: routeEnter 0.42s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+ion-menu ion-content::before {
+  content: '';
+  position: absolute;
+  inset: 10px 4px;
+  border-radius: 26px;
+  background: linear-gradient(180deg, rgba(72, 186, 170, 0.18), rgba(79, 130, 255, 0.05));
+  box-shadow: inset 0 0 0 1px rgba(183, 224, 255, 0.12), 0 0 28px rgba(54, 158, 154, 0.08);
+  pointer-events: none;
+}
+
+ion-menu ion-item::after {
+  content: attr(data-title);
+  position: absolute;
+  left: calc(100% + 12px);
+  top: 50%;
+  transform: translateY(-50%) translateX(-6px);
+  opacity: 0;
+  pointer-events: none;
+  white-space: nowrap;
+  background: rgba(10, 23, 46, 0.92);
+  color: #e5f1ff;
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  padding: 8px 12px;
+  border: 1px solid rgba(180, 214, 255, 0.34);
+  border-radius: 10px;
+  box-shadow: 0 12px 28px rgba(5, 10, 24, 0.5);
+  transition: opacity 0.18s ease, transform 0.18s ease;
+  z-index: 6;
+}
+
+ion-menu ion-item:hover::after,
+ion-menu ion-item:focus::after,
+ion-menu ion-item:focus-visible::after,
+ion-menu ion-item:active::after {
+  opacity: 1;
+  transform: translateY(-50%) translateX(0);
+}
+
+@keyframes routeEnter {
+  from {
+    opacity: 0.01;
+    transform: translate3d(18px, 0, 0) scale(0.988);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0) scale(1);
+  }
 }
 
 /* ── Light mode overrides────────────────────────────── */
@@ -174,6 +424,47 @@ body.light-mode .section-title {
 
 body.light-mode .section-subtitle {
   color: #3a4f77;
+}
+
+body.light-mode ion-menu ion-item::after {
+  background: rgba(240, 248, 255, 0.96);
+  color: #0c1a38;
+  border-color: rgba(100, 150, 230, 0.35);
+  box-shadow: 0 8px 20px rgba(60, 100, 200, 0.18);
+}
+
+@media (max-width: 780px) {
+  .platform-bar {
+    border-radius: 18px 18px 0 0;
+    padding: 12px 14px;
+  }
+
+  .platform-brand {
+    font-size: 1.25rem;
+  }
+}
+
+@media (max-width: 767px) {
+  ion-menu ion-item::after {
+    left: calc(100% + 10px);
+  }
+}
+
+@media (max-width: 480px) {
+  .platform-bar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .hero-utility {
+    gap: 6px;
+    padding: 6px;
+  }
+
+  .utility-chip {
+    font-size: 0.72rem;
+    padding: 6px 10px;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {

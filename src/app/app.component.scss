@@ -24,8 +24,6 @@ ion-split-pane.split-pane-visible > ion-menu {
 ion-split-pane.split-pane-visible > #main-content {
   flex: 1 1 auto;
   min-width: 0;
-  width: calc(100vw - var(--rail-width));
-  max-width: calc(100vw - var(--rail-width));
 }
 
 ion-menu ion-content {
@@ -208,25 +206,27 @@ body.light-mode ion-menu ion-item:hover .nav-icon-bubble {
 
 @media (max-width: 767px) {
   ion-split-pane {
-    --rail-width: 62px;
-    --side-width: 62px;
-    --side-max-width: 62px;
-    --side-min-width: 62px;
+    --rail-width: 56px;
+    --side-width: 56px;
+    --side-max-width: 56px;
+    --side-min-width: 56px;
   }
 
   ion-menu {
-    --width: 62px;
-    --max-width: 62px;
-    --min-width: 62px;
+    --width: 56px;
+    --max-width: 56px;
+    --min-width: 56px;
   }
 
   ion-menu ion-item {
-    width: 44px;
-    min-width: 44px;
+    width: 40px;
+    min-width: 40px;
+    margin: 5px auto;
   }
 
   .nav-icon-bubble {
-    width: 36px;
-    height: 36px;
+    width: 33px;
+    height: 33px;
+    border-radius: 12px;
   }
 }

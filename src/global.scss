@@ -142,12 +142,12 @@ body {
 }
 
 .platform-bar {
-  margin-top: 14px;
-  padding: 12px 18px;
+  margin-top: 10px;
+  padding: 5px 8px;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
-  gap: 16px;
+  gap: 6px;
   border-radius: 24px 24px 0 0;
   background: linear-gradient(180deg, rgba(34, 52, 49, 0.82) 0%, rgba(28, 40, 41, 0.88) 100%);
 }
@@ -155,26 +155,21 @@ body {
 .platform-nav {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: 6px;
 }
 
 .platform-link {
-  padding: 10px 14px;
+  padding: 5px 10px;
   border-radius: 999px;
   color: #d7e4de;
-  font-size: 0.92rem;
+  font-size: 0.78rem;
+  line-height: 1.1;
+  text-decoration: none;
 }
 
 .platform-link.active {
   background: rgba(67, 86, 81, 0.9);
   color: #ffffff;
-}
-
-.platform-brand {
-  font-size: 1.7rem;
-  font-weight: 800;
-  letter-spacing: 0.08em;
-  color: #eef8f2;
 }
 
 .hero-frame {
@@ -436,11 +431,7 @@ body.light-mode ion-menu ion-item::after {
 @media (max-width: 780px) {
   .platform-bar {
     border-radius: 18px 18px 0 0;
-    padding: 12px 14px;
-  }
-
-  .platform-brand {
-    font-size: 1.25rem;
+    padding: 5px 8px;
   }
 }
 
@@ -452,8 +443,7 @@ body.light-mode ion-menu ion-item::after {
 
 @media (max-width: 480px) {
   .platform-bar {
-    flex-direction: column;
-    align-items: flex-start;
+    padding: 4px 7px;
   }
 
   .hero-utility {
@@ -476,4 +466,15 @@ body.light-mode ion-menu ion-item::after {
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
+}
+
+/* Gap between sidebar rail and page content */
+app-home ion-content,
+app-about ion-content,
+app-services ion-content,
+app-testimonials ion-content,
+app-faq ion-content,
+app-contact ion-content {
+  --padding-start: 20px;
+  --padding-end: 10px;
 }

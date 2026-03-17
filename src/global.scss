@@ -71,6 +71,20 @@ ion-app {
   overflow-x: hidden;
 }
 
+ion-content {
+  --background: transparent !important;
+}
+
+/* Hide scrollbars globally */
+::-webkit-scrollbar {
+  display: none;
+}
+
+* {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
 ion-menu-button {
   display: none !important;
 }
@@ -148,8 +162,13 @@ body {
   justify-content: flex-start;
   align-items: center;
   gap: 6px;
-  border-radius: 24px 24px 0 0;
-  background: linear-gradient(180deg, rgba(34, 52, 49, 0.82) 0%, rgba(28, 40, 41, 0.88) 100%);
+  border-radius: 20px 20px 0 0;
+  border: 1px solid rgba(180, 218, 255, 0.14);
+  border-bottom: 1px solid rgba(180, 214, 255, 0.18);
+  background: rgba(7, 18, 38, 0.72);
+  -webkit-backdrop-filter: blur(14px);
+  backdrop-filter: blur(14px);
+  box-shadow: none;
 }
 
 .platform-nav {
@@ -161,15 +180,25 @@ body {
 .platform-link {
   padding: 5px 10px;
   border-radius: 999px;
-  color: #d7e4de;
+  color: rgba(220, 236, 244, 0.82);
   font-size: 0.78rem;
   line-height: 1.1;
   text-decoration: none;
+  border: 1px solid rgba(180, 214, 255, 0.08);
+  transition: 0.2s ease;
+}
+
+.platform-link:hover {
+  color: #f4fbff;
+  border-color: rgba(168, 216, 255, 0.26);
+  background: rgba(83, 116, 123, 0.38);
 }
 
 .platform-link.active {
-  background: rgba(67, 86, 81, 0.9);
-  color: #ffffff;
+  background: rgba(67, 86, 81, 0.92);
+  color: #fff;
+  border-color: rgba(168, 216, 255, 0.35);
+  box-shadow: inset 0 1px rgba(255, 255, 255, 0.18);
 }
 
 .hero-frame {

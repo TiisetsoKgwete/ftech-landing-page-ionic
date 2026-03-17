@@ -52,7 +52,7 @@
   --ftech-space-3: 16px;
   --ftech-space-4: 24px;
   --ftech-space-5: 32px;
-  --ftech-radius-card: 20px;
+  --ftech-radius-card: 24px;
   --ftech-radius-chip: 999px;
   --ftech-transition-fast: 0.2s ease;
   --ftech-transition-soft: 0.35s ease;
@@ -69,6 +69,7 @@ html,
 body,
 ion-app {
   overflow-x: hidden;
+  background: transparent !important;
 }
 
 ion-content {
@@ -156,36 +157,42 @@ body {
 }
 
 .platform-bar {
-  margin-top: 10px;
-  padding: 5px 8px;
+  padding: 4px 10px;
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-between;
   align-items: center;
-  gap: 6px;
-  border-radius: 20px 20px 0 0;
-  border: 1px solid rgba(180, 218, 255, 0.14);
-  border-bottom: 1px solid rgba(180, 214, 255, 0.18);
-  background: rgba(7, 18, 38, 0.72);
-  -webkit-backdrop-filter: blur(14px);
-  backdrop-filter: blur(14px);
+  gap: 10px;
+  border-radius: 0;
+  border: none;
+  border-bottom: 1px solid rgba(180, 214, 255, 0.15);
+  background: rgba(6, 12, 26, 0.88);
+  -webkit-backdrop-filter: blur(18px) saturate(130%);
+  backdrop-filter: blur(18px) saturate(130%);
   box-shadow: none;
+  flex-shrink: 0;
+  z-index: 10;
 }
 
 .platform-nav {
   display: flex;
-  flex-wrap: wrap;
-  gap: 6px;
+  flex-wrap: nowrap;
+  gap: 4px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  margin-left: auto;
+  padding-bottom: 1px;
 }
 
 .platform-link {
-  padding: 5px 10px;
+  padding: 3px 9px;
   border-radius: 999px;
   color: rgba(220, 236, 244, 0.82);
-  font-size: 0.78rem;
+  font-size: 0.74rem;
   line-height: 1.1;
   text-decoration: none;
   border: 1px solid rgba(180, 214, 255, 0.08);
   transition: 0.2s ease;
+  white-space: nowrap;
 }
 
 .platform-link:hover {
@@ -203,10 +210,10 @@ body {
 }
 
 .platform-link.active {
-  background: rgba(67, 86, 81, 0.92);
+  background: #4fa3ff;
   color: #fff;
-  border-color: rgba(168, 216, 255, 0.35);
-  box-shadow: inset 0 1px rgba(255, 255, 255, 0.18);
+  border-color: transparent;
+  box-shadow: 0 2px 10px rgba(79, 163, 255, 0.45);
 }
 
 ion-menu ion-item:focus-visible .nav-icon-bubble {
@@ -477,8 +484,8 @@ body.light-mode ion-menu ion-item::after {
 
 @media (max-width: 780px) {
   .platform-bar {
-    border-radius: 18px 18px 0 0;
-    padding: 5px 8px;
+    border-radius: 0;
+    padding: 4px 8px;
   }
 }
 

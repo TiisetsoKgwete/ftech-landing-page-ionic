@@ -241,31 +241,18 @@ body.light-mode ion-menu ion-item:hover .nav-icon-bubble {
 
 @media (max-width: 767px) {
   ion-split-pane {
-    --rail-width: 48px;
-    --side-width: 48px;
-    --side-max-width: 48px;
-    --side-min-width: 48px;
+    --rail-width: 0px;
+    --side-width: 0px;
+    --side-max-width: 0px;
+    --side-min-width: 0px;
+    background: transparent;
+    margin-top: 0;
+    height: 100%;
   }
 
-  ion-menu {
-    --width: 48px;
-    --max-width: 48px;
-    --min-width: 48px;
-  }
-
-  ion-split-pane.split-pane-visible > #main-content {
-    min-width: 0;
-  }
-
-  ion-menu ion-item {
-    width: 34px;
-    min-width: 34px;
-    margin: 4px auto;
-  }
-
-  .nav-icon-bubble {
-    width: 28px;
-    height: 28px;
-    border-radius: 9px;
+  .main-frame {
+    border-radius: 0;
+    border-left: none;
+    border-right: none;
   }
 }

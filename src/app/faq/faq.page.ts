@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterLink } from '@angular/router';
-import { IonHeader, IonToolbar, IonTitle, IonContent, IonButtons, IonMenuButton, IonCard, IonCardContent, IonIcon, IonButton } from '@ionic/angular/standalone';
+import { IonContent, IonCard, IonCardContent, IonIcon, IonButton } from '@ionic/angular/standalone';
 import { FooterComponent } from '../components/footer/footer.component';
 import { addIcons } from 'ionicons';
 import { chevronDownOutline, chevronUpOutline } from 'ionicons/icons';
@@ -16,7 +16,7 @@ interface FAQItem {
   selector: 'app-faq',
   templateUrl: './faq.page.html',
   styleUrls: ['./faq.page.scss'],
-  imports: [CommonModule, RouterLink, FooterComponent, IonHeader, IonToolbar, IonTitle, IonContent, IonButtons, IonMenuButton, IonCard, IonCardContent, IonIcon, IonButton],
+  imports: [CommonModule, RouterLink, FooterComponent, IonContent, IonCard, IonCardContent, IonIcon, IonButton],
 })
 export class FAQPage {
   faqs: FAQItem[] = [

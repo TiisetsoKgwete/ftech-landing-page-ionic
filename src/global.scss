@@ -335,15 +335,15 @@ ion-button[size='large'][color='primary']:hover {
 }
 
 .offer-art-one {
-  background-image: linear-gradient(180deg, rgba(12, 18, 34, 0.1), rgba(12, 18, 34, 0.45)), url('https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=900&q=80');
+  background-image: linear-gradient(180deg, rgba(12, 18, 34, 0.1), rgba(12, 18, 34, 0.45)), url('https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=900&q=80');
 }
 
 .offer-art-two {
-  background-image: linear-gradient(180deg, rgba(12, 18, 34, 0.1), rgba(12, 18, 34, 0.45)), url('https://images.unsplash.com/photo-1493711662062-fa541adb3fc8?auto=format&fit=crop&w=900&q=80');
+  background-image: linear-gradient(180deg, rgba(12, 18, 34, 0.1), rgba(12, 18, 34, 0.45)), url('https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=900&q=80');
 }
 
 .offer-art-three {
-  background-image: linear-gradient(180deg, rgba(12, 18, 34, 0.1), rgba(12, 18, 34, 0.45)), url('https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=900&q=80');
+  background-image: linear-gradient(180deg, rgba(12, 18, 34, 0.1), rgba(12, 18, 34, 0.45)), url('https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&w=900&q=80');
 }
 
 .offer-badge {
@@ -480,6 +480,199 @@ body.light-mode ion-menu ion-item::after {
   color: #0c1a38;
   border-color: rgba(100, 150, 230, 0.35);
   box-shadow: 0 8px 20px rgba(60, 100, 200, 0.18);
+}
+
+/* ── Light mode: page text overrides ────────────────── */
+body.light-mode .hero-title,
+body.light-mode .spotlight-card h3 {
+  color: #0a183a;
+  text-shadow: 0 2px 8px rgba(60, 100, 200, 0.12);
+}
+
+body.light-mode .tagline {
+  color: #1e3060;
+}
+
+body.light-mode .welcome,
+body.light-mode .spotlight-card p,
+body.light-mode .stat-card p,
+body.light-mode .feature-box p,
+body.light-mode .value-card p,
+body.light-mode .team-card p,
+body.light-mode .story-section .section-subtitle {
+  color: #3a4f77;
+}
+
+body.light-mode .stat-card h3 {
+  color: #0c1a38;
+}
+
+body.light-mode .feature-box h4,
+body.light-mode .feature-box ion-icon {
+  color: #1750a8;
+}
+
+body.light-mode .feature-box ion-icon {
+  color: #3b7dd8;
+}
+
+body.light-mode .value-card h3,
+body.light-mode .team-card h4 {
+  color: #0c1a38;
+}
+
+body.light-mode .team-card .role {
+  color: #2d5fa6;
+}
+
+body.light-mode .chip {
+  color: #2a4a8c;
+  border-color: rgba(60, 100, 200, 0.3);
+}
+
+body.light-mode .chip.active {
+  background: rgba(50, 100, 230, 0.18);
+  color: #1040b8;
+}
+
+body.light-mode .platform-bar {
+  background: rgba(235, 244, 255, 0.92);
+  border-bottom-color: rgba(60, 100, 200, 0.2);
+}
+
+body.light-mode .platform-link {
+  color: rgba(20, 45, 100, 0.85);
+  border-color: rgba(60, 100, 200, 0.15);
+}
+
+body.light-mode .platform-link:hover {
+  color: #0a2065;
+  background: rgba(80, 130, 230, 0.12);
+}
+
+body.light-mode .platform-link.active {
+  background: #1e6aff;
+  color: #fff;
+}
+
+body.light-mode .logo-wordmark {
+  color: #0a1f55;
+}
+
+body.light-mode .offers-strip h3,
+body.light-mode .features-highlight h2 {
+  color: #0c1a38;
+}
+
+body.light-mode .spotlight-kicker {
+  color: #2d5fa6;
+}
+
+body.light-mode .hero-section {
+  background: rgba(210, 228, 255, 0.55);
+}
+
+body.light-mode .spotlight-card {
+  background: linear-gradient(180deg, rgba(230, 242, 255, 0.92), rgba(220, 237, 255, 0.88));
+  border-color: rgba(100, 155, 230, 0.35);
+}
+
+body.light-mode .stat-card,
+body.light-mode .feature-box,
+body.light-mode .value-card,
+body.light-mode .team-card {
+  border-color: rgba(80, 130, 220, 0.25);
+}
+
+/* Services light mode */
+body.light-mode .service-card ion-card-title,
+body.light-mode .service-card h3 {
+  color: #0c1a38;
+}
+
+body.light-mode .service-card ion-card-content,
+body.light-mode .service-card p {
+  color: #3a4f77;
+}
+
+body.light-mode .service-card ion-icon,
+body.light-mode .service-icon {
+  color: #2060c8;
+}
+
+body.light-mode .step-number {
+  background: rgba(50, 100, 230, 0.15);
+  color: #1040b8;
+  border-color: rgba(60, 120, 230, 0.35);
+}
+
+body.light-mode .step-title {
+  color: #0c1a38;
+}
+
+body.light-mode .step-desc {
+  color: #3a4f77;
+}
+
+body.light-mode .process-section .section-title {
+  color: #0c1a38;
+}
+
+/* Testimonials light mode */
+body.light-mode .testimonial-card ion-card-title,
+body.light-mode .testimonial-author,
+body.light-mode .reviewer-name {
+  color: #0c1a38;
+}
+
+body.light-mode .reviewer-company,
+body.light-mode .testimonial-card ion-card-content {
+  color: #3a4f77;
+}
+
+/* FAQ light mode */
+body.light-mode .faq-question {
+  color: #0c1a38;
+}
+
+body.light-mode .faq-answer {
+  color: #3a4f77;
+}
+
+/* Contact light mode */
+body.light-mode .contact-hero .section-title {
+  color: #0c1a38;
+}
+
+body.light-mode .contact-hero .section-subtitle {
+  color: #3a4f77;
+}
+
+/* Footer light mode */
+body.light-mode ion-footer {
+  --background: rgba(225, 238, 255, 0.92);
+}
+
+body.light-mode .footer-container {
+  background: rgba(218, 234, 255, 0.7);
+}
+
+body.light-mode .footer-section h4,
+body.light-mode .footer-section h5 {
+  color: #0c1a38;
+}
+
+body.light-mode .footer-section p,
+body.light-mode .footer-section a {
+  color: #3a4f77;
+}
+
+body.light-mode .footer-section a:hover {
+  color: #1040b8;
+}
+
+body.light-mode .footer-bottom p {
+  color: #3a4f77;
 }
 
 @media (max-width: 780px) {

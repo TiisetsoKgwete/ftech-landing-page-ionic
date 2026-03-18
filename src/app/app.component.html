@@ -1,6 +1,6 @@
 <ion-app [class.route-transitioning]="isRouteTransitioning">
   <div class="route-glow" [class.active]="isRouteTransitioning"></div>
-  <ion-split-pane contentId="main-content" [when]="true" class="slim-shell">
+  <ion-split-pane contentId="main-content" [when]="'(min-width: 768px)'" class="slim-shell">
     <ion-menu contentId="main-content" type="reveal">
       <ion-content>
         <ion-list id="inbox-list">

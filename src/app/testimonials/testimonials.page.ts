@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
-import { IonHeader, IonToolbar, IonTitle, IonContent, IonButtons, IonMenuButton, IonCard, IonCardContent, IonIcon, IonButton } from '@ionic/angular/standalone';
+import { IonContent, IonCard, IonCardContent, IonIcon, IonButton } from '@ionic/angular/standalone';
 import { CommonModule } from '@angular/common';
 import { FooterComponent } from '../components/footer/footer.component';
 import { addIcons } from 'ionicons';
-import { starOutline } from 'ionicons/icons';
+import { star } from 'ionicons/icons';
 
 interface Testimonial {
   name: string;
@@ -19,7 +19,7 @@ interface Testimonial {
   selector: 'app-testimonials',
   templateUrl: './testimonials.page.html',
   styleUrls: ['./testimonials.page.scss'],
-  imports: [CommonModule, RouterLink, FooterComponent, IonHeader, IonToolbar, IonTitle, IonContent, IonButtons, IonMenuButton, IonCard, IonCardContent, IonIcon, IonButton],
+  imports: [CommonModule, RouterLink, FooterComponent, IonContent, IonCard, IonCardContent, IonIcon, IonButton],
 })
 export class TestimonialsPage {
   testimonials: Testimonial[] = [
@@ -58,7 +58,7 @@ export class TestimonialsPage {
   ];
 
   constructor() {
-    addIcons({ starOutline });
+    addIcons({ star });
   }
 
   getStars(rating: number): number[] {

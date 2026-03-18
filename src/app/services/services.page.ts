@@ -1,13 +1,18 @@
 import { Component } from '@angular/core';
-import { IonHeader, IonToolbar, IonTitle, IonContent, IonCard, IonCardHeader, IonCardTitle, IonCardContent, IonButtons, IonMenuButton } from '@ionic/angular/standalone';
+import { RouterLink } from '@angular/router';
+import { IonContent, IonCard, IonCardHeader, IonCardTitle, IonCardContent, IonIcon, IonButton } from '@ionic/angular/standalone';
 import { FooterComponent } from '../components/footer/footer.component';
+import { addIcons } from 'ionicons';
+import { analyticsOutline, codeSlashOutline, headsetOutline, layersOutline } from 'ionicons/icons';
 
 @Component({
   selector: 'app-services',
   templateUrl: './services.page.html',
   styleUrls: ['./services.page.scss'],
-  imports: [FooterComponent, IonHeader, IonToolbar, IonTitle, IonContent, IonCard, IonCardHeader, IonCardTitle, IonCardContent, IonButtons, IonMenuButton],
+  imports: [RouterLink, FooterComponent, IonContent, IonCard, IonCardHeader, IonCardTitle, IonCardContent, IonIcon, IonButton],
 })
 export class ServicesPage {
-  constructor() {}
+  constructor() {
+    addIcons({ codeSlashOutline, layersOutline, analyticsOutline, headsetOutline });
+  }
 }

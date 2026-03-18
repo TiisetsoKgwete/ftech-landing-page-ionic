@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonHeader, IonToolbar, IonTitle, IonContent, IonCard, IonCardHeader, IonCardTitle, IonCardContent, IonIcon, IonButtons, IonMenuButton } from '@ionic/angular/standalone';
+import { IonContent, IonCard, IonCardHeader, IonCardTitle, IonCardContent, IonIcon } from '@ionic/angular/standalone';
 import { FooterComponent } from '../components/footer/footer.component';
 import { addIcons } from 'ionicons';
 import { speedometerOutline, shieldCheckmarkOutline, phonePortraitOutline } from 'ionicons/icons';
@@ -8,7 +8,7 @@ import { speedometerOutline, shieldCheckmarkOutline, phonePortraitOutline } from
   selector: 'app-about',
   templateUrl: './about.page.html',
   styleUrls: ['./about.page.scss'],
-  imports: [FooterComponent, IonHeader, IonToolbar, IonTitle, IonContent, IonCard, IonCardHeader, IonCardTitle, IonCardContent, IonIcon, IonButtons, IonMenuButton],
+  imports: [FooterComponent, IonContent, IonCard, IonCardHeader, IonCardTitle, IonCardContent, IonIcon],
 })
 export class AboutPage {
   constructor() {

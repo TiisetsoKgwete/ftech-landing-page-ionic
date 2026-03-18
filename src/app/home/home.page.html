@@ -8,10 +8,6 @@
           <span class="utility-chip">Open-world</span>
           <span class="utility-chip">Cloud-native</span>
           <span class="utility-chip">Enterprise</span>
-          <div class="hero-mini-controls">
-            <span class="mini-control"></span>
-            <span class="mini-control"></span>
-          </div>
         </div>
 
         <div class="hero-layout">
@@ -22,8 +18,8 @@
             <p class="welcome">Build, scale, and secure your digital business with one trusted partner.</p>
 
             <div class="button-group">
-              <ion-button color="light" class="cta-button" (click)="toggleStats()">{{ showStats ? 'Hide Stats' : 'Show Stats' }}</ion-button>
-              <ion-button fill="outline" color="light" (click)="toggleFeatures()">{{ showFeatures ? 'Hide Features' : 'Show Features' }}</ion-button>
+              <ion-button color="light" class="cta-button" routerLink="/services">Explore Services</ion-button>
+              <ion-button fill="outline" color="light" routerLink="/contact">Book a Discovery Call</ion-button>
             </div>
           </div>
 
@@ -34,17 +30,12 @@
               <p>One dashboard for web systems, analytics, consulting milestones, and support health.</p>
               <ion-button size="small" color="primary" routerLink="/services">Explore Platform</ion-button>
             </div>
-            <div class="hero-pager">
-              <span class="pager-dot active"></span>
-              <span class="pager-dot"></span>
-              <span class="pager-dot"></span>
-            </div>
           </article>
         </div>
       </div>
     </section>
 
-    <section class="stats-section" *ngIf="showStats">
+    <section class="stats-section">
       <div class="stat-card glass">
         <h3>500+</h3>
         <p>Happy Clients</p>
@@ -78,7 +69,7 @@
       </div>
     </section>
 
-    <section class="features-highlight" *ngIf="showFeatures">
+    <section class="features-highlight">
       <h2 class="section-title">Why Choose FTECH?</h2>
       <ion-row>
         <ion-col sizeMd="6" sizeLg="3">
@@ -136,7 +127,7 @@
       </div>
     </section>
 
-    <section class="cta-section glass" *ngIf="showStats || showFeatures">
+    <section class="cta-section glass">
       <h2>Ready to Transform Your Business?</h2>
       <p>Join hundreds of companies already using FTECH.</p>
       <ion-button color="primary" size="large" class="primary-cta" routerLink="/contact">Contact Us Today</ion-button>

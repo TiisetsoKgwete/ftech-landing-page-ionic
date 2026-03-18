@@ -1,4 +1,15 @@
 <ion-content [fullscreen]="false" class="page-shell">
+  <div class="contact-shell">
+    <section class="contact-hero glass">
+      <div class="hero-tags">
+        <span class="chip active">Contact</span>
+        <span class="chip">Discovery</span>
+        <span class="chip">Support</span>
+      </div>
+      <h1 class="section-title">Let’s Build Something Great Together</h1>
+      <p class="section-subtitle">Tell us about your goals and we will propose a practical roadmap to move your business forward.</p>
+    </section>
+
   <form class="contact-form glass" [formGroup]="contactForm" (ngSubmit)="onSubmit()">
     <ion-item>
       <ion-label position="stacked">Name</ion-label>
@@ -26,5 +37,6 @@
 
     <ion-button expand="block" type="submit" [disabled]="contactForm.invalid">Send Message</ion-button>
   </form>
+  </div>
   <app-footer></app-footer>
 </ion-content>

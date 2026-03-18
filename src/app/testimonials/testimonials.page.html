@@ -12,8 +12,12 @@
 
     <section>
       <ion-card class="testimonial-card glass" *ngFor="let testimonial of testimonials">
-      <div class="stars">
-        <ion-icon name="star" *ngFor="let star of getStars(testimonial.rating)" color="warning"></ion-icon>
+      <div class="rating-header">
+        <span class="rating-score">{{ testimonial.rating }}.0</span>
+        <div class="stars">
+          <ion-icon name="star" *ngFor="let star of getStars(testimonial.rating)" color="warning"></ion-icon>
+        </div>
+        <span class="rating-verdict">{{ testimonial.rating >= 5 ? 'Excellent' : 'Very Good' }}</span>
       </div>
       
       <ion-card-content>

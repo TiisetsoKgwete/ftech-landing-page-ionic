@@ -45,6 +45,38 @@
   gap: 14px;
 }
 
+.service-thumb {
+  height: 120px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 18px 18px 0 0;
+  position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    background: linear-gradient(180deg, rgba(8, 18, 36, 0.08), rgba(8, 18, 36, 0.55));
+  }
+}
+
+.service-thumb-web {
+  background-image: url('https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=800&q=75');
+}
+
+.service-thumb-biz {
+  background-image: url('https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=800&q=75');
+}
+
+.service-thumb-consult {
+  background-image: url('https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=800&q=75');
+}
+
+.service-thumb-support {
+  background-image: url('https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?auto=format&fit=crop&w=800&q=75');
+}
+
 .service-card {
   margin: 0;
   border: 1px solid rgba(191, 218, 255, 0.25);

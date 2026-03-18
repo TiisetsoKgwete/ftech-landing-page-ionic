@@ -67,13 +67,40 @@
 }
 
 .stars {
-  padding: 14px 18px 0;
   display: flex;
   gap: 5px;
 
   ion-icon {
     font-size: 1.2rem;
   }
+}
+
+.rating-header {
+  padding: 14px 18px 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.rating-score {
+  font-size: 2rem;
+  font-weight: 900;
+  color: #f5f9ff;
+  line-height: 1;
+  letter-spacing: -0.02em;
+}
+
+.rating-verdict {
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #7ec8ff;
+  padding: 3px 8px;
+  border-radius: 999px;
+  border: 1px solid rgba(120, 200, 255, 0.3);
+  background: rgba(100, 180, 255, 0.12);
 }
 
 .testimonial-text {

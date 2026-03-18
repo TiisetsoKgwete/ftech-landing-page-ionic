@@ -332,6 +332,7 @@ ion-button[size='large'][color='primary']:hover {
   border: 1px solid rgba(198, 223, 255, 0.18);
   background-size: cover;
   background-position: center;
+  position: relative;
 }
 
 .offer-art-one {
@@ -646,6 +647,14 @@ body.light-mode .contact-hero .section-title {
 
 body.light-mode .contact-hero .section-subtitle {
   color: #3a4f77;
+}
+
+body.light-mode .view-all-link {
+  color: #1750a8;
+}
+
+body.light-mode .view-all-link:hover {
+  color: #0a2065;
 }
 
 /* Footer light mode */

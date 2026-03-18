@@ -4,8 +4,8 @@
     <section class="hero-section glass">
       <div class="hero-frame fade-in">
         <div class="hero-utility glass">
-          <span class="utility-chip active">Dark Tech</span>
-          <span class="utility-chip">Open-world</span>
+          <span class="utility-chip active">Digital Transformation</span>
+          <span class="utility-chip">Cloud Solutions</span>
           <span class="utility-chip">Cloud-native</span>
           <span class="utility-chip">Enterprise</span>
         </div>
@@ -35,18 +35,20 @@
       </div>
     </section>
 
-    <section class="stats-section">
-      <div class="stat-card glass">
-        <h3>500+</h3>
-        <p>Happy Clients</p>
+    <section class="stats-bar glass">
+      <div class="stat-item">
+        <span class="stat-value">500+</span>
+        <span class="stat-label">Happy Clients</span>
       </div>
-      <div class="stat-card glass">
-        <h3>10+</h3>
-        <p>Years Experience</p>
+      <div class="stat-divider"></div>
+      <div class="stat-item">
+        <span class="stat-value">10+</span>
+        <span class="stat-label">Years Experience</span>
       </div>
-      <div class="stat-card glass">
-        <h3>99%</h3>
-        <p>Success Rate</p>
+      <div class="stat-divider"></div>
+      <div class="stat-item">
+        <span class="stat-value">99%</span>
+        <span class="stat-label">Success Rate</span>
       </div>
     </section>
 
@@ -70,32 +72,35 @@
     </section>
 
     <section class="features-highlight">
-      <h2 class="section-title">Why Choose FTECH?</h2>
+      <div class="section-header">
+        <h2 class="section-title">Why Choose FTECH?</h2>
+        <a routerLink="/about" class="view-all-link">Learn more ›</a>
+      </div>
       <ion-row>
         <ion-col sizeMd="6" sizeLg="3">
           <div class="feature-box glass">
-            <ion-icon name="flash"></ion-icon>
+            <ion-icon name="flash-outline"></ion-icon>
             <h4>Lightning Fast</h4>
             <p>Performance optimized for speed</p>
           </div>
         </ion-col>
         <ion-col sizeMd="6" sizeLg="3">
           <div class="feature-box glass">
-            <ion-icon name="shield-checkmark"></ion-icon>
+            <ion-icon name="shield-checkmark-outline"></ion-icon>
             <h4>Highly Secure</h4>
             <p>Enterprise-grade security</p>
           </div>
         </ion-col>
         <ion-col sizeMd="6" sizeLg="3">
           <div class="feature-box glass">
-            <ion-icon name="people"></ion-icon>
+            <ion-icon name="people-outline"></ion-icon>
             <h4>Expert Team</h4>
             <p>Certified professionals</p>
           </div>
         </ion-col>
         <ion-col sizeMd="6" sizeLg="3">
           <div class="feature-box glass">
-            <ion-icon name="checkmark-done-circle"></ion-icon>
+            <ion-icon name="checkmark-done-circle-outline"></ion-icon>
             <h4>24/7 Support</h4>
             <p>Always here for you</p>
           </div>
@@ -104,25 +109,40 @@
     </section>
 
     <section class="offers-strip">
-      <h3 class="section-title">Special Offers</h3>
+      <div class="section-header">
+        <h3 class="section-title">Special Offers</h3>
+        <a routerLink="/services" class="view-all-link">Browse all ›</a>
+      </div>
       <div class="offer-scroll">
         <article class="offer-card glass">
-          <span class="offer-badge">20% Off</span>
-          <div class="offer-art offer-art-one"></div>
-          <p>Web Suite Launch</p>
-          <strong>20% Off</strong>
+          <div class="offer-art offer-art-one">
+            <span class="offer-badge">20% Off</span>
+          </div>
+          <div class="offer-body">
+            <span class="offer-status-chip">Most Popular</span>
+            <p class="offer-title">Web Suite Launch</p>
+            <strong class="offer-price">20% Off</strong>
+          </div>
         </article>
         <article class="offer-card glass">
-          <span class="offer-badge">Starter</span>
-          <div class="offer-art offer-art-two"></div>
-          <p>Business Automation</p>
-          <strong>Starter Pack</strong>
+          <div class="offer-art offer-art-two">
+            <span class="offer-badge">Starter</span>
+          </div>
+          <div class="offer-body">
+            <span class="offer-status-chip offer-status-new">New Bundle</span>
+            <p class="offer-title">Business Automation</p>
+            <strong class="offer-price">Starter Pack</strong>
+          </div>
         </article>
         <article class="offer-card glass">
-          <span class="offer-badge">Free</span>
-          <div class="offer-art offer-art-three"></div>
-          <p>Security Review</p>
-          <strong>Free Consultation</strong>
+          <div class="offer-art offer-art-three">
+            <span class="offer-badge">Free</span>
+          </div>
+          <div class="offer-body">
+            <span class="offer-status-chip offer-status-free">Free Offer</span>
+            <p class="offer-title">Security Review</p>
+            <strong class="offer-price">Free Consultation</strong>
+          </div>
         </article>
       </div>
     </section>

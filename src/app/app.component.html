@@ -1,7 +1,7 @@
 <ion-app [class.route-transitioning]="isRouteTransitioning">
   <div class="route-glow" [class.active]="isRouteTransitioning"></div>
   <ion-split-pane contentId="main-content" [when]="'(min-width: 768px)'" class="slim-shell">
-    <ion-menu contentId="main-content" type="reveal">
+    <ion-menu contentId="main-content" type="overlay">
       <ion-content>
         <ion-list id="inbox-list">
           @for (p of appPages; track p; let i = $index) {
@@ -28,6 +28,9 @@
 
     <div class="main-frame" id="main-content">
       <nav class="platform-bar">
+        <button class="hamburger-btn" type="button" (click)="openMenu()" aria-label="Open menu">
+          <ion-icon name="menu-outline" aria-hidden="true"></ion-icon>
+        </button>
         <div class="platform-logo">
           <span class="logo-badge">F</span>
           <span class="logo-wordmark">FTECH</span>

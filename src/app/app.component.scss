@@ -256,3 +256,51 @@ body.light-mode ion-menu ion-item:hover .nav-icon-bubble {
     border-right: none;
   }
 }
+
+/* Hamburger button — hidden on desktop, shown on mobile */
+.hamburger-btn {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px 6px;
+  border-radius: 10px;
+  color: rgba(220, 236, 244, 0.85);
+  font-size: 1.35rem;
+  line-height: 1;
+  flex-shrink: 0;
+  transition: background 0.18s ease, color 0.18s ease;
+  -webkit-tap-highlight-color: transparent;
+
+  ion-icon {
+    display: block;
+    pointer-events: none;
+  }
+
+  &:hover {
+    background: rgba(83, 116, 123, 0.32);
+    color: #fff;
+  }
+
+  &:focus-visible {
+    outline: 2px solid rgba(142, 209, 255, 0.75);
+    outline-offset: 2px;
+  }
+}
+
+body.light-mode .hamburger-btn {
+  color: rgba(20, 45, 100, 0.85);
+
+  &:hover {
+    background: rgba(80, 130, 230, 0.12);
+    color: #0a2065;
+  }
+}
+
+@media (max-width: 767px) {
+  .hamburger-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}

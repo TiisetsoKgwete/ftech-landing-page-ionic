@@ -1,9 +1,9 @@
 
 import { Component } from '@angular/core';
 import { NavigationCancel, NavigationEnd, NavigationError, NavigationStart, Router, RouterLink, RouterLinkActive } from '@angular/router';
-import { IonApp, IonSplitPane, IonMenu, IonContent, IonList, IonMenuToggle, IonItem, IonIcon, IonRouterOutlet, IonRouterLink } from '@ionic/angular/standalone';
+import { IonApp, IonSplitPane, IonMenu, IonContent, IonList, IonMenuToggle, IonItem, IonIcon, IonRouterOutlet, IonRouterLink, MenuController } from '@ionic/angular/standalone';
 import { addIcons } from 'ionicons';
-import { homeOutline, homeSharp, informationCircleOutline, informationCircleSharp, briefcaseOutline, briefcaseSharp, mailOutline, mailSharp, starOutline, starSharp, helpCircleOutline, helpCircleSharp, moonOutline, sunnyOutline } from 'ionicons/icons';
+import { homeOutline, homeSharp, informationCircleOutline, informationCircleSharp, briefcaseOutline, briefcaseSharp, mailOutline, mailSharp, starOutline, starSharp, helpCircleOutline, helpCircleSharp, moonOutline, sunnyOutline, menuOutline } from 'ionicons/icons';
 
 @Component({
   selector: 'app-root',
@@ -24,8 +24,8 @@ export class AppComponent {
   isDark = true;
   isRouteTransitioning = false;
 
-  constructor(private router: Router) {
-    addIcons({ homeOutline, homeSharp, informationCircleOutline, informationCircleSharp, briefcaseOutline, briefcaseSharp, mailOutline, mailSharp, starOutline, starSharp, helpCircleOutline, helpCircleSharp, moonOutline, sunnyOutline });
+  constructor(private router: Router, private menuCtrl: MenuController) {
+    addIcons({ homeOutline, homeSharp, informationCircleOutline, informationCircleSharp, briefcaseOutline, briefcaseSharp, mailOutline, mailSharp, starOutline, starSharp, helpCircleOutline, helpCircleSharp, moonOutline, sunnyOutline, menuOutline });
     const saved = localStorage.getItem('ftech-theme');
     this.isDark = saved !== 'light';
     this.applyTheme();
@@ -41,6 +41,10 @@ export class AppComponent {
         }, 420);
       }
     });
+  }
+
+  openMenu() {
+    this.menuCtrl.toggle();
   }
 
   toggleTheme() {

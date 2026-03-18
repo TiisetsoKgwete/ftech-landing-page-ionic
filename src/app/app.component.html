@@ -1,8 +1,13 @@
 <ion-app [class.route-transitioning]="isRouteTransitioning">
   <div class="route-glow" [class.active]="isRouteTransitioning"></div>
-  <ion-split-pane contentId="main-content" [when]="'(min-width: 768px)'" class="slim-shell">
-    <ion-menu contentId="main-content" type="overlay">
+  <ion-split-pane contentId="main-content" [when]="sidebarWhen" class="slim-shell">
+    <ion-menu contentId="main-content" type="overlay" (ionDidOpen)="onMenuOpen()" (ionDidClose)="onMenuClose()">
       <ion-content>
+        <div class="menu-header">
+          <button class="menu-close-btn" type="button" (click)="menuCtrl.close()" aria-label="Close menu">
+            <ion-icon name="close-outline" aria-hidden="true"></ion-icon>
+          </button>
+        </div>
         <ion-list id="inbox-list">
           @for (p of appPages; track p; let i = $index) {
             <ion-menu-toggle auto-hide="false">
@@ -23,13 +28,18 @@
             <span class="sr-only">Toggle theme</span>
           </button>
         </div>
+        <div class="sidebar-collapse-wrap">
+          <button class="sidebar-collapse-btn" type="button" (click)="toggleSidebar()" title="Collapse sidebar" aria-label="Collapse sidebar">
+            <ion-icon name="chevron-back-outline" aria-hidden="true"></ion-icon>
+          </button>
+        </div>
       </ion-content>
     </ion-menu>
 
     <div class="main-frame" id="main-content">
       <nav class="platform-bar">
-        <button class="hamburger-btn" type="button" (click)="openMenu()" aria-label="Open menu">
-          <ion-icon name="menu-outline" aria-hidden="true"></ion-icon>
+        <button class="hamburger-btn" [class.force-show]="isSidebarCollapsed" type="button" (click)="openMenu()" aria-label="Toggle menu">
+          <ion-icon [name]="isMenuOpen ? 'close-outline' : 'menu-outline'" aria-hidden="true"></ion-icon>
         </button>
         <div class="platform-logo">
           <span class="logo-badge">F</span>

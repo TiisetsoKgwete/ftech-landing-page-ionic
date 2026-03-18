@@ -3,7 +3,7 @@ import { Component } from '@angular/core';
 import { NavigationCancel, NavigationEnd, NavigationError, NavigationStart, Router, RouterLink, RouterLinkActive } from '@angular/router';
 import { IonApp, IonSplitPane, IonMenu, IonContent, IonList, IonMenuToggle, IonItem, IonIcon, IonRouterOutlet, IonRouterLink, MenuController } from '@ionic/angular/standalone';
 import { addIcons } from 'ionicons';
-import { homeOutline, homeSharp, informationCircleOutline, informationCircleSharp, briefcaseOutline, briefcaseSharp, mailOutline, mailSharp, starOutline, starSharp, helpCircleOutline, helpCircleSharp, moonOutline, sunnyOutline, menuOutline } from 'ionicons/icons';
+import { homeOutline, homeSharp, informationCircleOutline, informationCircleSharp, briefcaseOutline, briefcaseSharp, mailOutline, mailSharp, starOutline, starSharp, helpCircleOutline, helpCircleSharp, moonOutline, sunnyOutline, menuOutline, closeOutline, chevronBackOutline, chevronForwardOutline } from 'ionicons/icons';
 
 @Component({
   selector: 'app-root',
@@ -23,11 +23,18 @@ export class AppComponent {
 
   isDark = true;
   isRouteTransitioning = false;
+  isMenuOpen = false;
+  isSidebarCollapsed = false;
 
-  constructor(private router: Router, private menuCtrl: MenuController) {
-    addIcons({ homeOutline, homeSharp, informationCircleOutline, informationCircleSharp, briefcaseOutline, briefcaseSharp, mailOutline, mailSharp, starOutline, starSharp, helpCircleOutline, helpCircleSharp, moonOutline, sunnyOutline, menuOutline });
+  get sidebarWhen(): string | boolean {
+    return this.isSidebarCollapsed ? false : '(min-width: 768px)';
+  }
+
+  constructor(private router: Router, public menuCtrl: MenuController) {
+    addIcons({ homeOutline, homeSharp, informationCircleOutline, informationCircleSharp, briefcaseOutline, briefcaseSharp, mailOutline, mailSharp, starOutline, starSharp, helpCircleOutline, helpCircleSharp, moonOutline, sunnyOutline, menuOutline, closeOutline, chevronBackOutline, chevronForwardOutline });
     const saved = localStorage.getItem('ftech-theme');
     this.isDark = saved !== 'light';
+    this.isSidebarCollapsed = localStorage.getItem('ftech-sidebar') === 'collapsed';
     this.applyTheme();
 
     this.router.events.subscribe((event) => {
@@ -45,6 +52,19 @@ export class AppComponent {
 
   openMenu() {
     this.menuCtrl.toggle();
+  }
+
+  onMenuOpen() {
+    this.isMenuOpen = true;
+  }
+
+  onMenuClose() {
+    this.isMenuOpen = false;
+  }
+
+  toggleSidebar() {
+    this.isSidebarCollapsed = !this.isSidebarCollapsed;
+    localStorage.setItem('ftech-sidebar', this.isSidebarCollapsed ? 'collapsed' : 'expanded');
   }
 
   toggleTheme() {

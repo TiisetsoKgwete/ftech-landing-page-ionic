@@ -1,0 +1,51 @@
+.notfound-shell {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 85vh;
+  padding: 24px;
+}
+
+.notfound-card {
+  max-width: 520px;
+  width: 100%;
+  padding: 56px 40px;
+  border-radius: 28px;
+  border: 1px solid rgba(195, 220, 255, 0.2);
+  text-align: center;
+  animation: revealSoft 0.55s ease;
+}
+
+.error-code {
+  font-size: clamp(5rem, 18vw, 9rem);
+  font-weight: 800;
+  line-height: 1;
+  background: linear-gradient(135deg, #3a8dff 0%, #5dc8ff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 16px;
+}
+
+.notfound-title {
+  font-size: clamp(1.4rem, 3vw, 2rem);
+  color: #eaf3ff;
+  margin: 0 0 16px;
+}
+
+.notfound-subtitle {
+  color: #8aafd4;
+  line-height: 1.7;
+  margin: 0 0 32px;
+}
+
+@keyframes revealSoft {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

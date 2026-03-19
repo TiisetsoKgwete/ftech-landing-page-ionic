@@ -376,6 +376,48 @@ body.light-mode .sidebar-collapse-btn {
   }
 }
 
+.scroll-top-btn {
+  position: fixed;
+  right: 20px;
+  bottom: 22px;
+  z-index: 50;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 1px solid rgba(172, 214, 255, 0.42);
+  background: rgba(18, 40, 78, 0.9);
+  color: #e8f3ff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 12px 28px rgba(8, 22, 48, 0.45);
+  transition: transform 0.18s ease, background 0.18s ease;
+
+  ion-icon {
+    font-size: 1.15rem;
+  }
+
+  &:hover {
+    transform: translateY(-2px);
+    background: rgba(52, 106, 191, 0.95);
+  }
+
+  &:focus-visible {
+    outline: 2px solid rgba(142, 209, 255, 0.82);
+    outline-offset: 2px;
+  }
+}
+
+body.light-mode .scroll-top-btn {
+  background: rgba(220, 236, 255, 0.95);
+  color: #10306f;
+  border-color: rgba(88, 140, 224, 0.42);
+  box-shadow: 0 12px 28px rgba(60, 90, 140, 0.25);
+}
+
 @media (max-width: 767px) {
   .hamburger-btn {
     display: flex;
@@ -385,6 +427,11 @@ body.light-mode .sidebar-collapse-btn {
 
   .menu-header {
     display: flex;
+  }
+
+  .scroll-top-btn {
+    right: 14px;
+    bottom: 16px;
   }
 }
 

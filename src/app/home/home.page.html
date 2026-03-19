@@ -37,17 +37,17 @@
 
     <section class="stats-bar glass">
       <div class="stat-item">
-        <span class="stat-value">500+</span>
+        <span class="stat-value">{{ happyClients }}+</span>
         <span class="stat-label">Happy Clients</span>
       </div>
       <div class="stat-divider"></div>
       <div class="stat-item">
-        <span class="stat-value">10+</span>
+        <span class="stat-value">{{ yearsExperience }}+</span>
         <span class="stat-label">Years Experience</span>
       </div>
       <div class="stat-divider"></div>
       <div class="stat-item">
-        <span class="stat-value">99%</span>
+        <span class="stat-value">{{ successRate }}%</span>
         <span class="stat-label">Success Rate</span>
       </div>
     </section>
@@ -122,6 +122,7 @@
             <span class="offer-status-chip">Most Popular</span>
             <p class="offer-title">Web Suite Launch</p>
             <strong class="offer-price">20% Off</strong>
+            <ion-button fill="outline" size="small" routerLink="/contact">Claim Offer</ion-button>
           </div>
         </article>
         <article class="offer-card glass">
@@ -132,6 +133,7 @@
             <span class="offer-status-chip offer-status-new">New Bundle</span>
             <p class="offer-title">Business Automation</p>
             <strong class="offer-price">Starter Pack</strong>
+            <ion-button fill="outline" size="small" routerLink="/contact">Learn More</ion-button>
           </div>
         </article>
         <article class="offer-card glass">
@@ -142,6 +144,7 @@
             <span class="offer-status-chip offer-status-free">Free Offer</span>
             <p class="offer-title">Security Review</p>
             <strong class="offer-price">Free Consultation</strong>
+            <ion-button fill="outline" size="small" routerLink="/contact">Book Free Review</ion-button>
           </div>
         </article>
       </div>

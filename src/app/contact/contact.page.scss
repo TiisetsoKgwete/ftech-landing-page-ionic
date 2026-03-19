@@ -105,6 +105,41 @@ ion-button[type='submit']:hover {
   }
 }
 
+.success-card {
+  max-width: 840px;
+  margin: 0 auto 34px;
+  padding: 48px 32px;
+  border-radius: 24px;
+  border: 1px solid rgba(100, 220, 140, 0.35);
+  text-align: center;
+  animation: revealSoft 0.55s ease;
+
+  .success-icon {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #2ecc71, #1abc9c);
+    color: #fff;
+    font-size: 1.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+    color: #d4f0e0;
+    margin: 0 0 12px;
+  }
+
+  p {
+    color: #a8d8b8;
+    margin: 0 0 24px;
+    line-height: 1.65;
+  }
+}
+
 @media (max-width: 780px) {
   .contact-shell {
     padding: 0;

@@ -25,7 +25,7 @@
       </ion-card-content>
 
       <div class="client-info">
-        <img [src]="testimonial.image" [alt]="testimonial.name" title="{{ testimonial.name }}" class="client-avatar" />
+        <img [src]="testimonial.image" [alt]="testimonial.name" title="{{ testimonial.name }}" class="client-avatar" loading="lazy" decoding="async" />
         <div class="client-details">
           <h4>{{ testimonial.name }}</h4>
           <p class="role">{{ testimonial.role }}</p>

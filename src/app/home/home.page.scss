@@ -294,6 +294,17 @@
   padding: 10px 14px 14px;
   display: grid;
   gap: 5px;
+
+  ion-button {
+    justify-self: start;
+    margin-top: 6px;
+    --border-radius: 10px;
+    --border-color: rgba(173, 214, 255, 0.38);
+    --color: #c9e4ff;
+    font-weight: 600;
+    letter-spacing: 0.01em;
+    text-transform: none;
+  }
 }
 
 .offer-title {

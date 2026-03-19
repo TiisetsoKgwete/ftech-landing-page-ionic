@@ -71,7 +71,8 @@ ion-footer {
   gap: 12px;
   margin-top: 18px;
 
-  a {
+  a,
+  span {
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -84,7 +85,8 @@ ion-footer {
     transition: transform 0.2s ease, box-shadow 0.2s ease;
   }
 
-  a:hover {
+  a:hover,
+  span:hover {
     transform: translateY(-4px) scale(1.03);
     box-shadow: 0 8px 20px rgba(72, 157, 255, 0.38);
   }

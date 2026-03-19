@@ -58,4 +58,8 @@
     </div>
 
   </ion-split-pane>
+
+  <button class="scroll-top-btn" type="button" *ngIf="showScrollTop" (click)="scrollToTop()" aria-label="Scroll to top">
+    <ion-icon name="arrow-up-outline" aria-hidden="true"></ion-icon>
+  </button>
 </ion-app>

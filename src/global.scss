@@ -432,39 +432,39 @@ ion-menu ion-item:active::after {
 
 /* ── Light mode overrides────────────────────────────── */
 body.light-mode {
-  --ftech-bg-0: #e8f0ff;
-  --ftech-bg-1: #f0f5ff;
-  --ftech-bg-2: #dce8ff;
+  --ftech-bg-0: #c9d7ea;
+  --ftech-bg-1: #d6e1f0;
+  --ftech-bg-2: #bdcde3;
   --ftech-text: #0c1a38;
-  --ftech-muted: #3a4f77;
-  --ftech-glass-border: rgba(80, 120, 200, 0.28);
-  --ftech-glass-bg: rgba(255, 255, 255, 0.42);
-  --ftech-glass-shadow: 0 18px 45px rgba(80, 120, 200, 0.18);
+  --ftech-muted: #2b3f62;
+  --ftech-glass-border: rgba(72, 110, 180, 0.3);
+  --ftech-glass-bg: rgba(220, 232, 246, 0.84);
+  --ftech-glass-shadow: 0 14px 28px rgba(52, 82, 136, 0.18);
 
   background:
-    radial-gradient(1200px 700px at 8% -5%, rgba(160, 200, 255, 0.35), transparent 58%),
-    radial-gradient(900px 620px at 92% 10%, rgba(140, 170, 255, 0.25), transparent 50%),
-    linear-gradient(160deg, #e8f0ff 0%, #f0f5ff 46%, #dce8ff 100%);
+    radial-gradient(1200px 700px at 8% -5%, rgba(100, 140, 205, 0.26), transparent 58%),
+    radial-gradient(900px 620px at 92% 10%, rgba(85, 120, 190, 0.18), transparent 50%),
+    linear-gradient(160deg, #c9d7ea 0%, #d6e1f0 46%, #bdcde3 100%);
   color: var(--ftech-text);
 }
 
 body.light-mode .page-shell {
   background:
-    radial-gradient(1000px 600px at 100% -10%, rgba(130, 180, 255, 0.2), transparent 58%),
-    radial-gradient(900px 700px at -10% 10%, rgba(100, 200, 190, 0.1), transparent 54%),
-    linear-gradient(155deg, rgba(222, 237, 255, 0.97) 0%, rgba(238, 247, 255, 0.93) 100%);
+    radial-gradient(1000px 600px at 100% -10%, rgba(86, 128, 196, 0.14), transparent 58%),
+    radial-gradient(900px 700px at -10% 10%, rgba(80, 132, 152, 0.1), transparent 54%),
+    linear-gradient(155deg, rgba(202, 219, 238, 0.96) 0%, rgba(213, 226, 241, 0.94) 100%);
 }
 
 body.light-mode .glass {
-  background: rgba(255, 255, 255, 0.42);
-  border-color: rgba(80, 130, 220, 0.28);
-  box-shadow: 0 18px 45px rgba(80, 120, 200, 0.18);
+  background: rgba(220, 232, 246, 0.86);
+  border-color: rgba(72, 110, 180, 0.3);
+  box-shadow: 0 14px 28px rgba(52, 82, 136, 0.18);
 }
 
 body.light-mode .glass-hero {
-  background: rgba(240, 248, 255, 0.52);
-  border-color: rgba(100, 160, 230, 0.38);
-  box-shadow: 0 25px 65px rgba(60, 100, 200, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.65);
+  background: rgba(208, 224, 243, 0.6);
+  border-color: rgba(84, 138, 210, 0.4);
+  box-shadow: 0 20px 46px rgba(50, 86, 168, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.45);
 }
 
 body.light-mode .section-title {
@@ -491,7 +491,7 @@ body.light-mode .spotlight-card h3 {
 }
 
 body.light-mode .tagline {
-  color: #1e3060;
+  color: #1a2d55;
 }
 
 body.light-mode .welcome,
@@ -501,7 +501,22 @@ body.light-mode .feature-box p,
 body.light-mode .value-card p,
 body.light-mode .team-card p,
 body.light-mode .story-section .section-subtitle {
-  color: #3a4f77;
+  color: #2c3f62;
+}
+
+body.light-mode .stat-value,
+body.light-mode .trust-value {
+  color: #0f2249;
+}
+
+body.light-mode .stat-label,
+body.light-mode .trust-label {
+  color: #2c3f62;
+}
+
+body.light-mode .trust-item {
+  background: rgba(127, 164, 220, 0.15);
+  border-color: rgba(86, 127, 196, 0.25);
 }
 
 body.light-mode .stat-card h3 {
@@ -537,7 +552,7 @@ body.light-mode .chip.active {
 }
 
 body.light-mode .platform-bar {
-  background: rgba(235, 244, 255, 0.92);
+  background: rgba(209, 224, 242, 0.94);
   border-bottom-color: rgba(60, 100, 200, 0.2);
 }
 
@@ -570,12 +585,12 @@ body.light-mode .spotlight-kicker {
 }
 
 body.light-mode .hero-section {
-  background: rgba(210, 228, 255, 0.55);
+  background: rgba(191, 210, 236, 0.62);
 }
 
 body.light-mode .spotlight-card {
-  background: linear-gradient(180deg, rgba(230, 242, 255, 0.92), rgba(220, 237, 255, 0.88));
-  border-color: rgba(100, 155, 230, 0.35);
+  background: linear-gradient(180deg, rgba(199, 217, 239, 0.94), rgba(190, 210, 234, 0.92));
+  border-color: rgba(86, 127, 196, 0.35);
 }
 
 body.light-mode .stat-card,
@@ -593,7 +608,7 @@ body.light-mode .service-card h3 {
 
 body.light-mode .service-card ion-card-content,
 body.light-mode .service-card p {
-  color: #3a4f77;
+  color: #2c3f62;
 }
 
 body.light-mode .service-card ion-icon,
@@ -628,7 +643,24 @@ body.light-mode .reviewer-name {
 
 body.light-mode .reviewer-company,
 body.light-mode .testimonial-card ion-card-content {
-  color: #3a4f77;
+  color: #2c3f62;
+}
+
+body.light-mode .rating-score {
+  color: #12305f;
+}
+
+body.light-mode .rating-verdict {
+  color: #1c4a93;
+  border-color: rgba(83, 125, 196, 0.38);
+  background: rgba(112, 155, 225, 0.16);
+}
+
+body.light-mode .testimonial-text,
+body.light-mode .client-details h4,
+body.light-mode .client-details .role,
+body.light-mode .client-details .company {
+  color: #2b3f62;
 }
 
 /* FAQ light mode */
@@ -646,7 +678,31 @@ body.light-mode .contact-hero .section-title {
 }
 
 body.light-mode .contact-hero .section-subtitle {
-  color: #3a4f77;
+  color: #2c3f62;
+}
+
+body.light-mode .contact-form ion-item {
+  --background: rgba(149, 176, 212, 0.24);
+  --border-color: rgba(88, 130, 198, 0.35);
+  --color: #10254e;
+}
+
+body.light-mode .contact-form ion-label {
+  color: #18345f !important;
+}
+
+body.light-mode .contact-form ion-input,
+body.light-mode .contact-form ion-textarea {
+  --color: #0f2249;
+  --placeholder-color: #4b6794;
+}
+
+body.light-mode .success-card h3 {
+  color: #17385f;
+}
+
+body.light-mode .success-card p {
+  color: #31557a;
 }
 
 body.light-mode .view-all-link {
@@ -659,11 +715,11 @@ body.light-mode .view-all-link:hover {
 
 /* Footer light mode */
 body.light-mode ion-footer {
-  --background: rgba(225, 238, 255, 0.92);
+  --background: rgba(205, 220, 239, 0.94);
 }
 
 body.light-mode .footer-container {
-  background: rgba(218, 234, 255, 0.7);
+  background: rgba(195, 213, 236, 0.82);
 }
 
 body.light-mode .footer-section h4,
@@ -673,7 +729,7 @@ body.light-mode .footer-section h5 {
 
 body.light-mode .footer-section p,
 body.light-mode .footer-section a {
-  color: #3a4f77;
+  color: #2c3f62;
 }
 
 body.light-mode .footer-section a:hover {
@@ -681,7 +737,56 @@ body.light-mode .footer-section a:hover {
 }
 
 body.light-mode .footer-bottom p {
-  color: #3a4f77;
+  color: #2c3f62;
+}
+
+body.light-mode .offer-card {
+  background: rgba(199, 216, 236, 0.9);
+  border-color: rgba(86, 127, 196, 0.3);
+}
+
+body.light-mode .offer-title {
+  color: #2f4368;
+}
+
+body.light-mode .offer-price {
+  color: #0f2249;
+}
+
+body.light-mode .offer-status-chip {
+  background: rgba(224, 173, 68, 0.28);
+  color: #7a4d00;
+  border-color: rgba(170, 118, 26, 0.34);
+}
+
+body.light-mode .offer-status-new {
+  background: rgba(91, 179, 137, 0.25);
+  color: #1f6548;
+  border-color: rgba(66, 140, 106, 0.35);
+}
+
+body.light-mode .offer-status-free {
+  background: rgba(106, 164, 226, 0.25);
+  color: #1f4f85;
+  border-color: rgba(78, 128, 188, 0.35);
+}
+
+body.light-mode .notfound-title {
+  color: #122b58;
+}
+
+body.light-mode .notfound-subtitle {
+  color: #2f4c76;
+}
+
+body.light-mode .policy-card h3,
+body.light-mode .terms-card h3 {
+  color: #12305f;
+}
+
+body.light-mode .policy-card p,
+body.light-mode .terms-card p {
+  color: #2f4c76;
 }
 
 @media (max-width: 780px) {
@@ -695,11 +800,24 @@ body.light-mode .footer-bottom p {
   ion-menu ion-item::after {
     left: calc(100% + 10px);
   }
+
+  .platform-nav {
+    display: none;
+  }
+
+  .platform-logo {
+    margin-right: 0;
+  }
 }
 
 @media (max-width: 480px) {
   .platform-bar {
     padding: 4px 7px;
+  }
+
+  .logo-wordmark {
+    font-size: 0.82rem;
+    letter-spacing: 0.08em;
   }
 
   .hero-utility {

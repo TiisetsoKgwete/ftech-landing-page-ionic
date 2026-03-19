@@ -1,0 +1,16 @@
+{
+  "name": "FTECH Solutions",
+  "short_name": "FTECH",
+  "description": "FTECH Solutions digital transformation and cloud services.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#060b1b",
+  "theme_color": "#4fa3ff",
+  "icons": [
+    {
+      "src": "assets/icon/favicon.png",
+      "sizes": "64x64",
+      "type": "image/png"
+    }
+  ]
+}

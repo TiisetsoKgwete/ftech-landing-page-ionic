@@ -31,6 +31,13 @@ ion-split-pane.split-pane-visible > #main-content {
   box-sizing: border-box;
 }
 
+ion-split-pane > #main-content {
+  flex: 1 1 auto;
+  min-width: 0;
+  width: 100%;
+  box-sizing: border-box;
+}
+
 .main-frame {
   display: flex;
   flex-direction: column;

@@ -195,3 +195,17 @@
     transform: translateY(0);
   }
 }
+
+@media (max-width: 480px) {
+  .about-hero,
+  .story-section {
+    padding: 14px;
+    border-radius: 16px;
+  }
+
+  .value-card,
+  .team-card {
+    padding: 14px;
+    border-radius: 12px;
+  }
+}

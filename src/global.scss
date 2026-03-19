@@ -171,6 +171,7 @@ body {
   box-shadow: none;
   flex-shrink: 0;
   z-index: 10;
+  position: relative;
 }
 
 .platform-nav {
@@ -808,6 +809,12 @@ body.light-mode .terms-card p {
   .platform-logo {
     margin-right: 0;
   }
+
+  .platform-logo {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
 }
 
 @media (max-width: 480px) {
@@ -851,4 +858,16 @@ app-faq ion-content,
 app-contact ion-content {
   --padding-start: 20px;
   --padding-end: 10px;
+}
+
+@media (max-width: 480px) {
+  app-home ion-content,
+  app-about ion-content,
+  app-services ion-content,
+  app-testimonials ion-content,
+  app-faq ion-content,
+  app-contact ion-content {
+    --padding-start: 12px;
+    --padding-end: 8px;
+  }
 }

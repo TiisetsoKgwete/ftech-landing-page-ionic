@@ -506,6 +506,11 @@ ion-toolbar {
   .offer-scroll {
     grid-auto-columns: minmax(170px, 1fr);
   }
+
+  .hero-frame {
+    min-height: 400px;
+    padding: 14px;
+  }
 }
 
 @media (max-width: 480px) {
@@ -529,5 +534,22 @@ ion-toolbar {
 
   .trust-row {
     grid-template-columns: 1fr;
+  }
+
+  .hero-frame {
+    min-height: 280px;
+    padding: 10px;
+  }
+
+  .hero-section {
+    padding: 8px;
+  }
+
+  .offer-scroll {
+    grid-auto-columns: minmax(150px, 1fr);
+  }
+
+  .cta-section {
+    padding: 20px 14px;
   }
 }

@@ -145,3 +145,20 @@ ion-button[type='submit']:hover {
     padding: 0;
   }
 }
+
+@media (max-width: 480px) {
+  .contact-hero {
+    padding: 14px;
+    border-radius: 16px;
+  }
+
+  .contact-form {
+    padding: 16px;
+    border-radius: 18px;
+  }
+
+  .success-card {
+    padding: 32px 20px;
+    border-radius: 18px;
+  }
+}

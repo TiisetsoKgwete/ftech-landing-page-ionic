@@ -168,6 +168,23 @@
   }
 }
 
+@media (max-width: 480px) {
+  .services-hero {
+    padding: 14px;
+    border-radius: 16px;
+  }
+
+  .methodology-section {
+    padding: 16px;
+    border-radius: 16px;
+  }
+
+  .method-step {
+    padding: 12px;
+    border-radius: 12px;
+  }
+}
+
 @media (max-width: 780px) {
   .services-shell {
     padding: 0;

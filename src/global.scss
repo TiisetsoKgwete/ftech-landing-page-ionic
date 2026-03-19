@@ -803,17 +803,14 @@ body.light-mode .terms-card p {
   }
 
   .platform-nav {
-    display: none;
+    display: flex;
+    flex: 1 1 auto;
+    min-width: 0;
+    margin-left: 0;
   }
 
   .platform-logo {
     margin-right: 0;
-  }
-
-  .platform-logo {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
   }
 }
 

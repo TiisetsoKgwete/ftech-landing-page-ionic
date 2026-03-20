@@ -182,6 +182,16 @@ body {
   overflow-y: hidden;
   margin-left: auto;
   padding-bottom: 1px;
+
+.platform-nav::after {
+  content: '→';
+  position: relative;
+  margin-left: 6px;
+  opacity: 0.4;
+  font-size: 0.9rem;
+  color: rgba(220, 236, 244, 0.6);
+  flex-shrink: 0;
+}
 }
 
 .platform-link {
@@ -436,7 +446,7 @@ body.light-mode {
   --ftech-bg-0: #c9d7ea;
   --ftech-bg-1: #d6e1f0;
   --ftech-bg-2: #bdcde3;
-  --ftech-text: #0c1a38;
+  --ftech-text: #081630;
   --ftech-muted: #2b3f62;
   --ftech-glass-border: rgba(72, 110, 180, 0.3);
   --ftech-glass-bg: rgba(220, 232, 246, 0.84);

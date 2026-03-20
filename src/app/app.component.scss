@@ -1,8 +1,15 @@
+// SCSS Variables for optimization
+$rail-width: 60px;
+$transition-fast: 0.15s ease;
+$transition-normal: 0.2s ease;
+$transition-soft: 0.35s ease;
+$backdrop-blur: blur(8px);
+
 ion-split-pane {
-  --rail-width: 60px;
-  --side-width: 60px;
-  --side-max-width: 60px;
-  --side-min-width: 60px;
+  --rail-width: #{$rail-width};
+  --side-width: #{$rail-width};
+  --side-max-width: #{$rail-width};
+  --side-min-width: #{$rail-width};
   width: 100%;
   height: calc(100% - 10px);
   margin-top: 10px;
@@ -124,7 +131,7 @@ ion-menu ion-item {
   min-width: 44px;
   margin: 5px auto;
   border-radius: 12px;
-  transition: transform 0.15s ease;
+  transition: transform $transition-fast;
 }
 
 ion-menu ion-item.selected {
@@ -152,24 +159,22 @@ ion-menu ion-item.selected ion-icon {
   align-items: center;
   justify-content: center;
   background: rgba(66, 128, 230, 0.24);
-  -webkit-backdrop-filter: blur(8px);
-  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: $backdrop-blur;
+  backdrop-filter: $backdrop-blur;
   border: 1px solid rgba(180, 215, 255, 0.3);
   box-shadow: none;
-  transition: background 0.2s ease, transform 0.15s ease;
+  transition: background $transition-normal ease, transform $transition-fast ease;
   margin: 0 auto;
 }
 
 ion-menu ion-item:hover .nav-icon-bubble {
   transform: translateY(-2px);
   background: rgba(90, 155, 255, 0.18);
-  box-shadow: none;
 }
 
 ion-menu ion-item.selected .nav-icon-bubble {
   background: rgba(70, 135, 255, 0.34);
   border-color: rgba(160, 210, 255, 0.52);
-  box-shadow: none;
 }
 
 
@@ -264,20 +269,26 @@ body.light-mode ion-menu ion-item:hover .nav-icon-bubble {
   }
 }
 
-/* Hamburger button — hidden on desktop, shown on mobile */
-.hamburger-btn {
-  display: none;
+// Shared button mixin
+@mixin button-reset {
   background: none;
   border: none;
   cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  outline: none;
+}
+
+/* Hamburger button — hidden on desktop, shown on mobile */
+.hamburger-btn {
+  @include button-reset;
+  display: none;
   padding: 4px 6px;
   border-radius: 10px;
   color: rgba(220, 236, 244, 0.85);
   font-size: 1.35rem;
   line-height: 1;
   flex-shrink: 0;
-  transition: background 0.18s ease, color 0.18s ease;
-  -webkit-tap-highlight-color: transparent;
+  transition: background $transition-normal ease, color $transition-normal ease;
   position: relative;
   z-index: 999;
 
@@ -308,24 +319,39 @@ body.light-mode ion-menu ion-item:hover .nav-icon-bubble {
   padding: 10px 8px 0;
 }
 
-.menu-close-btn {
-  background: rgba(90, 140, 230, 0.14);
-  border: 1px solid rgba(180, 215, 255, 0.22);
+.menu-close-btn,
+.sidebar-collapse-btn {
+  @include button-reset;
   border-radius: 10px;
-  cursor: pointer;
   padding: 5px;
-  color: #b9d7ff;
+  color: #8ab8e8;
   font-size: 1.25rem;
   line-height: 1;
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: background 0.18s ease, color 0.18s ease;
-  -webkit-tap-highlight-color: transparent;
+  transition: background $transition-normal ease, color $transition-normal ease;
 
   &:hover {
     background: rgba(90, 155, 255, 0.24);
     color: #fff;
+  }
+}
+
+.menu-close-btn {
+  background: rgba(90, 140, 230, 0.14);
+  border: 1px solid rgba(180, 215, 255, 0.22);
+}
+
+.sidebar-collapse-btn {
+  background: rgba(66, 108, 210, 0.16);
+  border: 1px solid rgba(180, 215, 255, 0.22);
+  font-size: 1.1rem;
+  padding: 5px 7px;
+  transition: background $transition-normal ease, color $transition-normal ease, transform $transition-normal ease;
+
+  &:hover {
+    transform: translateX(-2px);
   }
 }
 
@@ -338,28 +364,6 @@ body.light-mode ion-menu ion-item:hover .nav-icon-bubble {
   right: 0;
   justify-content: center;
   z-index: 2;
-}
-
-.sidebar-collapse-btn {
-  background: rgba(66, 108, 210, 0.16);
-  border: 1px solid rgba(180, 215, 255, 0.22);
-  border-radius: 10px;
-  cursor: pointer;
-  padding: 5px 7px;
-  color: #8ab8e8;
-  font-size: 1.1rem;
-  line-height: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: background 0.18s ease, color 0.18s ease, transform 0.2s ease;
-  -webkit-tap-highlight-color: transparent;
-
-  &:hover {
-    background: rgba(90, 155, 255, 0.24);
-    color: #fff;
-    transform: translateX(-2px);
-  }
 }
 
 body.light-mode .hamburger-btn {
@@ -383,6 +387,7 @@ body.light-mode .sidebar-collapse-btn {
   }
 }
 
+/* Scroll to top button */
 .scroll-top-btn {
   position: fixed;
   right: 20px;
@@ -401,7 +406,7 @@ body.light-mode .sidebar-collapse-btn {
   -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
   box-shadow: 0 12px 28px rgba(8, 22, 48, 0.45);
-  transition: transform 0.18s ease, background 0.18s ease;
+  transition: transform $transition-normal ease, background $transition-normal ease;
 
   ion-icon {
     font-size: 1.15rem;

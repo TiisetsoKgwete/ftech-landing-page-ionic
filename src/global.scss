@@ -495,14 +495,13 @@ body.light-mode ion-menu ion-item::after {
 }
 
 /* ── Light mode: page text overrides ────────────────── */
-body.light-mode .hero-title,
-body.light-mode .spotlight-card h3 {
-  color: #0a183a;
-  text-shadow: 0 2px 8px rgba(60, 100, 200, 0.12);
+body.light-mode .hero-title {
+  color: #eef5ff;
+  text-shadow: 0 8px 24px rgba(8, 18, 36, 0.55);
 }
 
 body.light-mode .tagline {
-  color: #1a2d55;
+  color: #dce9ff;
 }
 
 body.light-mode .welcome,
@@ -513,6 +512,15 @@ body.light-mode .value-card p,
 body.light-mode .team-card p,
 body.light-mode .story-section .section-subtitle {
   color: #2c3f62;
+}
+
+body.light-mode .welcome {
+  color: #d2e2fb;
+}
+
+body.light-mode .spotlight-card h3 {
+  color: #10244d;
+  text-shadow: none;
 }
 
 body.light-mode .stat-value,
@@ -592,7 +600,7 @@ body.light-mode .features-highlight h2 {
 }
 
 body.light-mode .spotlight-kicker {
-  color: #2d5fa6;
+  color: #a9cbff;
 }
 
 body.light-mode .hero-section {
@@ -609,6 +617,18 @@ body.light-mode .feature-box,
 body.light-mode .value-card,
 body.light-mode .team-card {
   border-color: rgba(80, 130, 220, 0.25);
+}
+
+body.light-mode .feature-card ion-card-title {
+  color: #0f2249;
+}
+
+body.light-mode .feature-card ion-card-content {
+  color: #2a446a;
+}
+
+body.light-mode .feature-card ion-icon {
+  color: #2e70cf;
 }
 
 /* Services light mode */

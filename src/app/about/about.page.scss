@@ -209,3 +209,31 @@
     border-radius: 12px;
   }
 }
+
+:host-context(body.light-mode) .feature-card ion-card-title {
+  color: #0f2249;
+}
+
+:host-context(body.light-mode) .feature-card ion-card-content {
+  color: #2a446a;
+}
+
+:host-context(body.light-mode) .feature-card ion-icon {
+  color: #2e70cf;
+}
+
+:host-context(body.light-mode) .value-card h3,
+:host-context(body.light-mode) .team-card h4,
+:host-context(body.light-mode) .story-section .section-title {
+  color: #0f2249;
+}
+
+:host-context(body.light-mode) .value-card p,
+:host-context(body.light-mode) .team-card p,
+:host-context(body.light-mode) .story-section .section-subtitle {
+  color: #2a446a;
+}
+
+:host-context(body.light-mode) .team-card .role {
+  color: #2d5fa6;
+}

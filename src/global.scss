@@ -443,14 +443,14 @@ ion-menu ion-item:active::after {
 
 /* ── Light mode overrides────────────────────────────── */
 body.light-mode {
-  --ftech-bg-0: #c9d7ea;
-  --ftech-bg-1: #d6e1f0;
-  --ftech-bg-2: #bdcde3;
+  --ftech-bg-0: #b6c7dd;
+  --ftech-bg-1: #c1d1e4;
+  --ftech-bg-2: #aabdd7;
   --ftech-text: #081630;
   --ftech-muted: #2b3f62;
   --ftech-glass-border: rgba(72, 110, 180, 0.3);
-  --ftech-glass-bg: rgba(220, 232, 246, 0.84);
-  --ftech-glass-shadow: 0 14px 28px rgba(52, 82, 136, 0.18);
+  --ftech-glass-bg: rgba(203, 217, 236, 0.9);
+  --ftech-glass-shadow: 0 14px 28px rgba(44, 72, 120, 0.2);
 
   background:
     radial-gradient(1200px 700px at 8% -5%, rgba(100, 140, 205, 0.26), transparent 58%),
@@ -461,19 +461,19 @@ body.light-mode {
 
 body.light-mode .page-shell {
   background:
-    radial-gradient(1000px 600px at 100% -10%, rgba(86, 128, 196, 0.14), transparent 58%),
-    radial-gradient(900px 700px at -10% 10%, rgba(80, 132, 152, 0.1), transparent 54%),
-    linear-gradient(155deg, rgba(202, 219, 238, 0.96) 0%, rgba(213, 226, 241, 0.94) 100%);
+    radial-gradient(1000px 600px at 100% -10%, rgba(78, 118, 184, 0.16), transparent 58%),
+    radial-gradient(900px 700px at -10% 10%, rgba(70, 116, 144, 0.12), transparent 54%),
+    linear-gradient(155deg, rgba(186, 204, 226, 0.98) 0%, rgba(198, 214, 232, 0.96) 100%);
 }
 
 body.light-mode .glass {
-  background: rgba(220, 232, 246, 0.86);
+  background: rgba(203, 217, 236, 0.9);
   border-color: rgba(72, 110, 180, 0.3);
-  box-shadow: 0 14px 28px rgba(52, 82, 136, 0.18);
+  box-shadow: 0 14px 28px rgba(44, 72, 120, 0.2);
 }
 
 body.light-mode .glass-hero {
-  background: rgba(208, 224, 243, 0.6);
+  background: rgba(194, 211, 232, 0.72);
   border-color: rgba(84, 138, 210, 0.4);
   box-shadow: 0 20px 46px rgba(50, 86, 168, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.45);
 }
@@ -571,7 +571,7 @@ body.light-mode .chip.active {
 }
 
 body.light-mode .platform-bar {
-  background: rgba(209, 224, 242, 0.94);
+  background: rgba(191, 209, 230, 0.95);
   border-bottom-color: rgba(60, 100, 200, 0.2);
 }
 
@@ -604,7 +604,7 @@ body.light-mode .spotlight-kicker {
 }
 
 body.light-mode .hero-section {
-  background: rgba(191, 210, 236, 0.62);
+  background: rgba(174, 196, 226, 0.72);
 }
 
 body.light-mode .spotlight-card {
@@ -750,7 +750,7 @@ body.light-mode ion-footer {
 }
 
 body.light-mode .footer-container {
-  background: rgba(195, 213, 236, 0.82);
+  background: rgba(183, 202, 226, 0.9);
 }
 
 body.light-mode .footer-section h4,

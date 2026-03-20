@@ -170,3 +170,13 @@ ion-button[type='submit']:hover {
     outline-offset: 2px;
   }
 }
+
+:host-context(body.light-mode) .contact-hero .section-subtitle,
+:host-context(body.light-mode) .success-card p {
+  color: #2a446a;
+}
+
+:host-context(body.light-mode) .contact-hero .section-title,
+:host-context(body.light-mode) .success-card h3 {
+  color: #0f2249;
+}

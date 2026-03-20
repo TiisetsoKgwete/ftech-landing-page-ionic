@@ -196,3 +196,20 @@
     transform: translateY(0);
   }
 }
+
+:host-context(body.light-mode) .testimonials-hero .section-subtitle,
+:host-context(body.light-mode) .testimonial-text,
+:host-context(body.light-mode) .client-details .company {
+  color: #2a446a;
+}
+
+:host-context(body.light-mode) .rating-score,
+:host-context(body.light-mode) .client-details h4,
+:host-context(body.light-mode) .cta-section h2 {
+  color: #0f2249;
+}
+
+:host-context(body.light-mode) .client-details .role,
+:host-context(body.light-mode) .cta-section p {
+  color: #2d5fa6;
+}

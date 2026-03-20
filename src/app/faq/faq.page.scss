@@ -164,3 +164,18 @@
     transform: translateY(0);
   }
 }
+
+:host-context(body.light-mode) .faq-hero .section-subtitle,
+:host-context(body.light-mode) .faq-answer p,
+:host-context(body.light-mode) .cta-section p {
+  color: #2a446a;
+}
+
+:host-context(body.light-mode) .question h3,
+:host-context(body.light-mode) .cta-section h2 {
+  color: #0f2249;
+}
+
+:host-context(body.light-mode) .question ion-icon {
+  color: #2e70cf;
+}

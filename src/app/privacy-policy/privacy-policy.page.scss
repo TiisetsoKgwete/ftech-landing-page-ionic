@@ -25,3 +25,11 @@
 .policy-card ion-button {
   margin-top: 22px;
 }
+
+:host-context(body.light-mode) .policy-card h3 {
+  color: #0f2249;
+}
+
+:host-context(body.light-mode) .policy-card p {
+  color: #2a446a;
+}
